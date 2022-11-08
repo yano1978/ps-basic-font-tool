@@ -11,7 +11,7 @@ const App = () => {
             <DropdownMenu />
           </div>
           <div className="flex w-full tablet:w-auto">
-            <ul className="flex flex-col tablet:flex-row w-full pr-10 pb-4 tablet:p-0 fixed bottom-0 tablet:relative tablet:top-0 bg-black">
+            <ul className="flex flex-col tablet:flex-row w-full [&_li]:px-3.5 pr-10 pb-4 tablet:p-0 fixed bottom-0 tablet:relative tablet:top-0 bg-black">
               <li className="flex">
                 <label htmlFor="size" className="mr-2">
                   Size
