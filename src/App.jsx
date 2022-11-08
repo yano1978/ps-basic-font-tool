@@ -18,37 +18,19 @@ const App = () => {
                 <label htmlFor="volume" className="mr-2">
                   Size
                 </label>
-                <input
-                  type="range"
-                  id="volume"
-                  name="volume"
-                  min="0"
-                  max="11"
-                />
+                <input type="range" id="volume" name="volume" min="0" max="11" />
               </li>
               <li className="flex">
                 <label htmlFor="volume" className="mr-2">
                   Kern
                 </label>
-                <input
-                  type="range"
-                  id="volume"
-                  name="volume"
-                  min="0"
-                  max="11"
-                />
+                <input type="range" id="volume" name="volume" min="0" max="11" />
               </li>
               <li className="flex">
                 <label htmlFor="volume" className="mr-2">
                   Leading
                 </label>
-                <input
-                  type="range"
-                  id="volume"
-                  name="volume"
-                  min="0"
-                  max="11"
-                />
+                <input type="range" id="volume" name="volume" min="0" max="11" />
               </li>
               <li className="flex">
                 <a href="#">
@@ -65,11 +47,7 @@ const App = () => {
                     stroke="currentColor"
                     className="w-6 h-6"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M12 6v12m6-6H6"
-                    />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
                   </svg>
                 </a>
               </li>
