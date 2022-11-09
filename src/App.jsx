@@ -1,7 +1,17 @@
+import { useState } from 'react';
 import DropdownMenu from './components/FontSizeMenu';
 import TextInput from './components/TextInput';
 
 const App = () => {
+  const [isBgRed, setBgRed] = useState(false);
+  const [show, setShowMenu] = useState(false);
+
+  const handleMenuShowing = () => {
+    setShowMenu(!show);
+  };
+  const handleBgRed = () => {
+    setBgRed((current) => !current);
+  };
   return (
     <>
       <nav className="mx-5 pt-4">
@@ -33,11 +43,20 @@ const App = () => {
             </ul>
           </div>
           <div className="flex absolute right-5 tablet:right-0 tablet:relative">
-            <a href="#">
+            <button onClick={handleMenuShowing}>
               <div className="w-4 h-4 border border-white rounded-full mr-3.5 mt-1 relative overflow-hidden">
                 <div className="bg-white  absolute w-1/2 h-full"></div>
               </div>
-            </a>
+            </button>
+            {!show && (
+              <div className="absolute top-7 flex flex-col">
+                <button onClick={handleBgRed}>
+                  <div className="w-4 h-4 border border-white rounded-full mr-3.5 mt-1 relative overflow-hidden">
+                    <div className="bg-[#E24523] absolute w-1/2 h-full"></div>
+                  </div>
+                </button>
+              </div>
+            )}
             <a href="#">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +72,13 @@ const App = () => {
           </div>
         </div>
       </nav>
-      <main className="text-white pt-20 px-2.5 h-full">
+      <main
+        style={{
+          backgroundColor: isBgRed ? '#E24523' : '',
+          color: isBgRed ? '#000' : '',
+        }}
+        className="text-white pt-20 px-2.5 h-full"
+      >
         <TextInput />
       </main>
     </>
