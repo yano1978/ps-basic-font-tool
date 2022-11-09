@@ -1,4 +1,4 @@
-import DropdownMenu from './components/DropdownMenu';
+import DropdownMenu from './components/FontSizeMenu';
 import TextInput from './components/TextInput';
 
 const App = () => {
@@ -11,7 +11,7 @@ const App = () => {
             <DropdownMenu />
           </div>
           <div className="flex w-full tablet:w-auto">
-            <ul className="flex flex-col tablet:flex-row w-full [&_li]:px-3.5 pr-10 pb-4 tablet:p-0 fixed bottom-0 tablet:relative tablet:top-0 bg-black">
+            <ul className="flex flex-col tablet:flex-row w-full [&_li]:px-1.5 lg:[&_li]:px-5 pr-10 pb-4 tablet:p-0 fixed bottom-0 tablet:relative tablet:top-0 bg-black">
               <li className="flex">
                 <label htmlFor="size" className="mr-2">
                   Size
@@ -53,7 +53,7 @@ const App = () => {
           </div>
         </div>
       </nav>
-      <main className="text-white pt-20 px-14 h-full">
+      <main className="text-white pt-20 px-2.5 h-full">
         <TextInput />
       </main>
     </>
