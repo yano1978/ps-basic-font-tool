@@ -4,6 +4,7 @@ import DropdownMenu from './components/FontSizeMenu';
 const App = () => {
   let [changeBgColor, setChangeColor] = useState('');
   let [changeTextColor, setChangeTextColor] = useState('');
+  let [changeDropdownColor, setDropdownColor] = useState('');
   const [size, setSize] = useState(230);
   const [spacing, setLetterSpacing] = useState(-18);
   const [leading, setLineHeight] = useState(200);
@@ -29,28 +30,66 @@ const App = () => {
   };
 
   const handleBgColor = (value) => {
-    // console.log(value);
     changeBgColor = value.bg;
     changeTextColor = value.text;
     setChangeColor(changeBgColor);
     setChangeTextColor(changeTextColor);
+    if (changeBgColor === '#000') {
+      changeDropdownColor = 'black';
+    } else if (changeBgColor === '#E24523') {
+      changeDropdownColor = 'red';
+      if (changeTextColor === '#fff') {
+        changeDropdownColor = 'red-white';
+      }
+    } else if (changeBgColor === '#4B4E54') {
+      changeDropdownColor = 'grey';
+      if (changeTextColor === '#fff') {
+        changeDropdownColor = 'grey-white';
+      }
+    }
+    setDropdownColor(changeDropdownColor);
   };
 
   return (
     <>
-      <nav className="mx-5 py-4">
-        <div className="flex flex-wrap justify-start tablet:justify-between items-center mx-auto text-white">
+      <nav
+        style={{
+          backgroundColor: changeBgColor,
+          color: changeTextColor,
+        }}
+        className="py-4"
+      >
+        <div
+          style={{
+            backgroundColor: changeBgColor,
+            color: changeTextColor,
+          }}
+          className="mx-5  flex flex-wrap justify-start tablet:justify-between items-center text-white"
+        >
           <a href="/">Ps Basic</a>
           <div className="ml-20 tablet:ml-0">
-            <DropdownMenu />
+            <DropdownMenu className={changeDropdownColor} />
           </div>
-          <div className="flex w-full tablet:w-auto">
-            <ul className="flex flex-col tablet:flex-row w-full [&_li]:px-1.5 lg:[&_li]:px-5 p-3.5 tablet:p-0 fixed bottom-0 left-0 tablet:relative tablet:top-0 bg-black">
+          <div
+            style={{
+              backgroundColor: changeBgColor,
+              color: changeTextColor,
+            }}
+            className="flex w-full tablet:w-auto"
+          >
+            <ul
+              style={{
+                backgroundColor: changeBgColor,
+                color: changeTextColor,
+              }}
+              className="flex flex-col tablet:flex-row w-full [&_li]:px-1.5 lg:[&_li]:px-5 p-3.5 tablet:p-0 fixed bottom-0 left-0 tablet:relative tablet:top-0 bg-black"
+            >
               <li className="flex">
                 <label htmlFor="size" className="flex w-full lg:min-w-[100px]">
                   Size: {size + 'px'}
                 </label>
                 <input
+                  className={changeTextColor == '#000' ? 'circle-black' : ''}
                   onChange={fontsizeChange}
                   type="range"
                   id="size"
@@ -64,6 +103,7 @@ const App = () => {
                   Kern {spacing + 'px'}
                 </label>
                 <input
+                  className={changeTextColor == '#000' ? 'circle-black' : ''}
                   onChange={letterSpacingChange}
                   type="range"
                   id="kern"
@@ -77,6 +117,7 @@ const App = () => {
                   Leading {leading + 'px'}
                 </label>
                 <input
+                  className={changeTextColor == '#000' ? 'circle-black' : ''}
                   onChange={lineHeightChange}
                   type="range"
                   id="leading"
@@ -94,7 +135,7 @@ const App = () => {
               </div>
             </button>
             <div
-              className={`transition-all duration-200 absolute top-7 flex flex-col ${
+              className={`transition-all duration-200 z-10 absolute top-7 flex flex-col ${
                 show ? 'opacity-100' : 'opacity-0'
               }`}
             >
@@ -128,6 +169,15 @@ const App = () => {
               >
                 <div className="w-4 h-4 border border-white rounded-full mr-3.5 mt-1 relative overflow-hidden">
                   <div className="bg-[#E24523] absolute w-1/2 h-full"></div>
+                  <div className="bg-white absolute right-0 w-1/2 h-full"></div>
+                </div>
+              </button>
+              <button
+                onClick={() => handleBgColor({ bg: '#4B4E54', text: '#fff' })}
+                className="pt-1"
+              >
+                <div className="w-4 h-4 border border-white rounded-full mr-3.5 mt-1 relative overflow-hidden">
+                  <div className="bg-[#4B4E54] absolute w-1/2 h-full"></div>
                   <div className="bg-white absolute right-0 w-1/2 h-full"></div>
                 </div>
               </button>

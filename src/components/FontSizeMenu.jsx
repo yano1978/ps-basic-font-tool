@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const DropdownMenu = () => {
+const DropdownMenu = ({ className = '' }) => {
   const [alternative, setAlternative] = useState(false);
   const [ligature, setLigature] = useState(false);
 
@@ -12,7 +12,7 @@ const DropdownMenu = () => {
   };
 
   return (
-    <details>
+    <details className={className}>
       <summary>760 - regular</summary>
       <div className="font-menu">
         <div className="col">

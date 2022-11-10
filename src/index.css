@@ -40,6 +40,15 @@ body {
     border-radius: 1px;
     border: 0px solid #000;
   }
+
+  input[type='range'].circle-black {
+    &::-webkit-slider-runnable-track {
+      background-color: #000;
+    }
+    &::-webkit-slider-thumb {
+      border: 1px solid #000;
+    }
+  }
   input[type='range']::-webkit-slider-thumb {
     box-shadow: 0px 0px 0px #000;
     border: 1px solid #fff;
@@ -93,7 +102,7 @@ body {
     box-shadow: none;
     resize: none;
   }
-  /* Input details native override */
+  /* Details native override */
   details {
     summary {
       position: relative;
@@ -116,6 +125,13 @@ body {
       }
     }
   }
+  /* Override triangle color when color changes */
+  details.grey > summary,
+  details.red > summary {
+    &:before {
+      border-color: transparent transparent transparent #000;
+    }
+  }
 
   details[open] {
     > summary:before {
@@ -128,11 +144,12 @@ body {
       flex-wrap: wrap;
       position: absolute;
       width: 100%;
-      top: 0;
+      top: 10px;
       left: 0;
       margin: 3rem 0;
       padding: 2.5rem 1.25rem;
       background: #000;
+      color: #fff;
       .col {
         width: 33.3333%;
       }
@@ -151,6 +168,55 @@ body {
     100% {
       opacity: 1;
       transform: translateX(0);
+    }
+  }
+  /* Override dropdown styles when color changes */
+  details.grey {
+    .font-menu {
+      background: #4b4e54;
+      color: #000;
+      input[type='checkbox'] + label:before {
+        border: 1px solid #000;
+      }
+      input[type='checkbox']:checked + label:before {
+        background-color: #000;
+      }
+    }
+  }
+  details.grey-white {
+    .font-menu {
+      background: #4b4e54;
+      color: #fff;
+      input[type='checkbox'] + label:before {
+        border: 1px solid #fff;
+      }
+      input[type='checkbox']:checked + label:before {
+        background-color: #fff;
+      }
+    }
+  }
+  details.red {
+    .font-menu {
+      background: #e24523;
+      color: #000;
+      input[type='checkbox'] + label:before {
+        border: 1px solid #000;
+      }
+      input[type='checkbox']:checked + label:before {
+        background-color: #000;
+      }
+    }
+  }
+  details.red-white {
+    .font-menu {
+      background: #e24523;
+      color: #fff;
+      input[type='checkbox'] + label:before {
+        border: 1px solid #fff;
+      }
+      input[type='checkbox']:checked + label:before {
+        background-color: #fff;
+      }
     }
   }
 }
