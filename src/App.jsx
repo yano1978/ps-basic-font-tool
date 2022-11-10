@@ -3,25 +3,25 @@ import DropdownMenu from './components/FontSizeMenu';
 import TextInput from './components/TextInput';
 
 const App = () => {
-  const [isBgRed, setBgRed] = useState(false);
-  const [show, setShowMenu] = useState(false);
+  const [bgColor, setBgColor] = useState(false);
+  const [show, setShowColors] = useState(false);
 
   const handleMenuShowing = () => {
-    setShowMenu(!show);
+    setShowColors(!show);
   };
-  const handleBgRed = () => {
-    setBgRed((current) => !current);
+  const handleBgColor = () => {
+    setBgColor((current) => !current);
   };
   return (
     <>
-      <nav className="mx-5 pt-4">
+      <nav className="mx-5 py-4">
         <div className="flex flex-wrap justify-start tablet:justify-between items-center mx-auto text-white">
           <a href="/">Ps Basic</a>
           <div className="ml-20 tablet:ml-0">
             <DropdownMenu />
           </div>
           <div className="flex w-full tablet:w-auto">
-            <ul className="flex flex-col tablet:flex-row w-full [&_li]:px-1.5 lg:[&_li]:px-5 pr-10 pb-4 tablet:p-0 fixed bottom-0 tablet:relative tablet:top-0 bg-black">
+            <ul className="flex flex-col tablet:flex-row w-full [&_li]:px-1.5 lg:[&_li]:px-5 p-3.5 tablet:p-0 fixed bottom-0 left-0 tablet:relative tablet:top-0 bg-black">
               <li className="flex">
                 <label htmlFor="size" className="mr-2">
                   Size
@@ -48,15 +48,18 @@ const App = () => {
                 <div className="bg-white  absolute w-1/2 h-full"></div>
               </div>
             </button>
-            {!show && (
-              <div className="absolute top-7 flex flex-col">
-                <button onClick={handleBgRed}>
-                  <div className="w-4 h-4 border border-white rounded-full mr-3.5 mt-1 relative overflow-hidden">
-                    <div className="bg-[#E24523] absolute w-1/2 h-full"></div>
-                  </div>
-                </button>
-              </div>
-            )}
+            <div
+              className={`transition-all duration-200 absolute top-7 flex flex-col ${
+                show ? 'opacity-100' : 'opacity-0'
+              }`}
+            >
+              <button onClick={handleBgColor}>
+                <div className="w-4 h-4 border border-white rounded-full mr-3.5 mt-1 relative overflow-hidden">
+                  <div className="bg-[#E24523] absolute w-1/2 h-full"></div>
+                  <div className="bg-black absolute right-0 w-1/2 h-full"></div>
+                </div>
+              </button>
+            </div>
             <a href="#">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -74,8 +77,8 @@ const App = () => {
       </nav>
       <main
         style={{
-          backgroundColor: isBgRed ? '#E24523' : '',
-          color: isBgRed ? '#000' : '',
+          backgroundColor: bgColor ? '#E24523' : '',
+          color: bgColor ? '#000' : '',
         }}
         className="text-white pt-20 px-2.5 h-full"
       >

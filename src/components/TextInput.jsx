@@ -1,14 +1,13 @@
-import { EditTextarea } from 'react-edit-text';
-import 'react-edit-text/dist/index.css';
-
 const TextInput = () => {
   return (
-    <EditTextarea
-      className="edit-text"
+    <textarea
       name="description"
+      id="description"
+      cols="30"
+      rows="10"
       defaultValue="Type here..."
       placeholder="Type here..."
-    />
+    ></textarea>
   );
 };
 export default TextInput;
