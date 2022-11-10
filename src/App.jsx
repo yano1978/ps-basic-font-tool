@@ -1,18 +1,35 @@
 import { useState } from 'react';
 import DropdownMenu from './components/FontSizeMenu';
-import TextInput from './components/TextInput';
 
 const App = () => {
   let [changeBgColor, setChangeColor] = useState('');
   let [changeTextColor, setChangeTextColor] = useState('');
+  const [size, setSize] = useState(230);
+  const [spacing, setLetterSpacing] = useState(-18);
+  const [leading, setLineHeight] = useState(200);
   const [show, setShowColors] = useState(false);
+
+  const fontsizeChange = (e) => {
+    // console.log('setting font size', e.target.value);
+    setSize(parseInt(e.target.value));
+  };
+
+  const letterSpacingChange = (e) => {
+    // console.log('setting letter spacing', e.target.value);
+    setLetterSpacing(parseInt(e.target.value));
+  };
+
+  const lineHeightChange = (e) => {
+    console.log('setting line height', e.target.value);
+    setLineHeight(parseInt(e.target.value));
+  };
 
   const handleMenuShowing = () => {
     setShowColors(!show);
   };
 
   const handleBgColor = (value) => {
-    console.log(value);
+    // console.log(value);
     changeBgColor = value.bg;
     changeTextColor = value.text;
     setChangeColor(changeBgColor);
@@ -30,22 +47,43 @@ const App = () => {
           <div className="flex w-full tablet:w-auto">
             <ul className="flex flex-col tablet:flex-row w-full [&_li]:px-1.5 lg:[&_li]:px-5 p-3.5 tablet:p-0 fixed bottom-0 left-0 tablet:relative tablet:top-0 bg-black">
               <li className="flex">
-                <label htmlFor="size" className="mr-2">
-                  Size
+                <label htmlFor="size" className="flex w-full lg:min-w-[100px]">
+                  Size: {size + 'px'}
                 </label>
-                <input type="range" id="size" name="size" min="0" max="100" />
+                <input
+                  onChange={fontsizeChange}
+                  type="range"
+                  id="size"
+                  name="size"
+                  min="0"
+                  max="230"
+                />
               </li>
               <li className="flex">
-                <label htmlFor="kern" className="mr-2">
-                  Kern
+                <label htmlFor="kern" className="flex w-full lg:min-w-[100px]">
+                  Kern {spacing + 'px'}
                 </label>
-                <input type="range" id="kern" name="kern" min="0" max="100" />
+                <input
+                  onChange={letterSpacingChange}
+                  type="range"
+                  id="kern"
+                  name="kern"
+                  min="-18"
+                  max="100"
+                />
               </li>
               <li className="flex">
-                <label htmlFor="leading" className="mr-2">
-                  Leading
+                <label htmlFor="leading" className="flex w-full lg:min-w-[100px]">
+                  Leading {leading + 'px'}
                 </label>
-                <input type="range" id="leading" name="leading" min="0" max="100" />
+                <input
+                  onChange={lineHeightChange}
+                  type="range"
+                  id="leading"
+                  name="leading"
+                  min="-200"
+                  max="500"
+                />
               </li>
             </ul>
           </div>
@@ -101,7 +139,7 @@ const App = () => {
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
-                className="w-6 h-6"
+                className="w-7 h-7 mt-1"
               >
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
               </svg>
@@ -114,9 +152,21 @@ const App = () => {
           backgroundColor: changeBgColor,
           color: changeTextColor,
         }}
-        className="text-white pt-20 px-2.5 h-full"
+        className="text-white p-3.5 h-full"
       >
-        <TextInput />
+        <textarea
+          style={{
+            fontSize: size + 'px',
+            letterSpacing: spacing + 'px',
+            lineHeight: leading + 'px',
+          }}
+          name="description"
+          id="description"
+          cols="30"
+          rows="10"
+          defaultValue="Type here..."
+          placeholder="Type here..."
+        ></textarea>
       </main>
     </>
   );

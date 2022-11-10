@@ -85,7 +85,6 @@ body {
   /* Input textarea native override */
   textarea {
     background: transparent;
-    font-size: 80px;
     border: none;
     overflow: auto;
     outline: none;
