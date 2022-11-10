@@ -20,7 +20,7 @@ const App = () => {
   };
 
   const lineHeightChange = (e) => {
-    console.log('setting line height', e.target.value);
+    // console.log('setting line height', e.target.value);
     setLineHeight(parseInt(e.target.value));
   };
 
