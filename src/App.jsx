@@ -3,15 +3,22 @@ import DropdownMenu from './components/FontSizeMenu';
 import TextInput from './components/TextInput';
 
 const App = () => {
-  const [bgColor, setBgColor] = useState(false);
+  let [changeBgColor, setChangeColor] = useState('');
+  let [changeTextColor, setChangeTextColor] = useState('');
   const [show, setShowColors] = useState(false);
 
   const handleMenuShowing = () => {
     setShowColors(!show);
   };
-  const handleBgColor = () => {
-    setBgColor((current) => !current);
+
+  const handleBgColor = (value) => {
+    console.log(value);
+    changeBgColor = value.bg;
+    changeTextColor = value.text;
+    setChangeColor(changeBgColor);
+    setChangeTextColor(changeTextColor);
   };
+
   return (
     <>
       <nav className="mx-5 py-4">
@@ -53,10 +60,37 @@ const App = () => {
                 show ? 'opacity-100' : 'opacity-0'
               }`}
             >
-              <button onClick={handleBgColor}>
+              <button onClick={() => handleBgColor({ bg: '#000', text: '#fff' })}>
+                <div className="w-4 h-4 border border-white rounded-full mr-3.5 mt-1 relative overflow-hidden">
+                  <div className="bg-black absolute w-1/2 h-full"></div>
+                  <div className="bg-white absolute right-0 w-1/2 h-full"></div>
+                </div>
+              </button>
+              <button
+                onClick={() => handleBgColor({ bg: '#E24523', text: '#000' })}
+                className="pt-1"
+              >
                 <div className="w-4 h-4 border border-white rounded-full mr-3.5 mt-1 relative overflow-hidden">
                   <div className="bg-[#E24523] absolute w-1/2 h-full"></div>
                   <div className="bg-black absolute right-0 w-1/2 h-full"></div>
+                </div>
+              </button>
+              <button
+                onClick={() => handleBgColor({ bg: '#4B4E54', text: '#000' })}
+                className="pt-1"
+              >
+                <div className="w-4 h-4 border border-white rounded-full mr-3.5 mt-1 relative overflow-hidden">
+                  <div className="bg-[#4B4E54] absolute w-1/2 h-full"></div>
+                  <div className="bg-black absolute right-0 w-1/2 h-full"></div>
+                </div>
+              </button>
+              <button
+                onClick={() => handleBgColor({ bg: '#E24523', text: '#fff' })}
+                className="pt-1"
+              >
+                <div className="w-4 h-4 border border-white rounded-full mr-3.5 mt-1 relative overflow-hidden">
+                  <div className="bg-[#E24523] absolute w-1/2 h-full"></div>
+                  <div className="bg-white absolute right-0 w-1/2 h-full"></div>
                 </div>
               </button>
             </div>
@@ -77,8 +111,8 @@ const App = () => {
       </nav>
       <main
         style={{
-          backgroundColor: bgColor ? '#E24523' : '',
-          color: bgColor ? '#000' : '',
+          backgroundColor: changeBgColor,
+          color: changeTextColor,
         }}
         className="text-white pt-20 px-2.5 h-full"
       >
