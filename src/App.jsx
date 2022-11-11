@@ -34,17 +34,43 @@ const App = () => {
     changeTextColor = value.text;
     setChangeColor(changeBgColor);
     setChangeTextColor(changeTextColor);
+    // console.log('bg:', changeBgColor, 'text:', changeTextColor);
+    // Colors combination available
     if (changeBgColor === '#000') {
-      changeDropdownColor = 'black';
-    } else if (changeBgColor === '#E24523') {
-      changeDropdownColor = 'red';
+      // bg is black
       if (changeTextColor === '#fff') {
+        // text is white
+        changeDropdownColor = 'black-white';
+      } else {
+        // text is red
+        changeDropdownColor = 'black-red';
+      }
+    } else if (changeBgColor === '#E24523') {
+      // bg is red
+      if (changeTextColor === '#fff') {
+        // text is white
         changeDropdownColor = 'red-white';
+      } else {
+        // text is black
+        changeDropdownColor = 'red-black';
       }
     } else if (changeBgColor === '#4B4E54') {
-      changeDropdownColor = 'grey';
+      // bg is grey
       if (changeTextColor === '#fff') {
+        // text is white
         changeDropdownColor = 'grey-white';
+      } else {
+        // text is black
+        changeDropdownColor = 'grey-black';
+      }
+    } else {
+      // bg is white
+      if (changeTextColor === '#000') {
+        // text is black
+        changeDropdownColor = 'white-black';
+      } else {
+        // text is red
+        changeDropdownColor = 'white-red';
       }
     }
     setDropdownColor(changeDropdownColor);
@@ -130,8 +156,16 @@ const App = () => {
           </div>
           <div className="flex absolute right-5 tablet:right-0 tablet:relative">
             <button onClick={handleMenuShowing}>
-              <div className="w-4 h-4 border border-white rounded-full mr-3.5 mt-1 relative overflow-hidden">
-                <div className="bg-white  absolute w-1/2 h-full"></div>
+              <div
+                className={`w-4 h-4 border !border-${
+                  changeTextColor == '#fff' ||
+                  (changeTextColor == '#E24523' && changeBgColor != '#fff')
+                    ? 'white'
+                    : 'black'
+                } rounded-full mr-3.5 mt-1 relative overflow-hidden`}
+              >
+                <div className="bg-black absolute right-0 w-1/2 h-full"></div>
+                <div className="bg-white absolute w-1/2 h-full"></div>
               </div>
             </button>
             <div
@@ -139,26 +173,57 @@ const App = () => {
                 show ? 'opacity-100' : 'opacity-0'
               }`}
             >
-              <button onClick={() => handleBgColor({ bg: '#000', text: '#fff' })}>
-                <div className="w-4 h-4 border border-white rounded-full mr-3.5 mt-1 relative overflow-hidden">
-                  <div className="bg-black absolute w-1/2 h-full"></div>
-                  <div className="bg-white absolute right-0 w-1/2 h-full"></div>
-                </div>
-              </button>
-              <button
-                onClick={() => handleBgColor({ bg: '#E24523', text: '#000' })}
-                className="pt-1"
-              >
-                <div className="w-4 h-4 border border-white rounded-full mr-3.5 mt-1 relative overflow-hidden">
+              <button onClick={() => handleBgColor({ bg: '#E24523', text: '#000' })}>
+                <div
+                  className={`w-4 h-4 border !border-${
+                    changeTextColor == '#fff' ||
+                    (changeTextColor == '#E24523' && changeBgColor != '#fff')
+                      ? 'white'
+                      : 'black'
+                  } rounded-full mr-3.5 mt-1 relative overflow-hidden`}
+                >
                   <div className="bg-[#E24523] absolute w-1/2 h-full"></div>
                   <div className="bg-black absolute right-0 w-1/2 h-full"></div>
+                </div>
+              </button>
+              <button onClick={() => handleBgColor({ bg: '#fff', text: '#000' })} className="pt-1">
+                <div
+                  className={`w-4 h-4 border !border-${
+                    changeTextColor == '#fff' ||
+                    (changeTextColor == '#E24523' && changeBgColor != '#fff')
+                      ? 'white'
+                      : 'black'
+                  } rounded-full mr-3.5 mt-1 relative overflow-hidden`}
+                >
+                  <div className="bg-white absolute w-1/2 h-full"></div>
+                  <div className="bg-black absolute right-0 w-1/2 h-full"></div>
+                </div>
+              </button>
+              <button onClick={() => handleBgColor({ bg: '#000', text: '#fff' })} className="pt-1">
+                <div
+                  className={`w-4 h-4 border !border-${
+                    changeTextColor == '#fff' ||
+                    (changeTextColor == '#E24523' && changeBgColor != '#fff')
+                      ? 'white'
+                      : 'black'
+                  } rounded-full mr-3.5 mt-1 relative overflow-hidden`}
+                >
+                  <div className="bg-black absolute w-1/2 h-full"></div>
+                  <div className="bg-white absolute right-0 w-1/2 h-full"></div>
                 </div>
               </button>
               <button
                 onClick={() => handleBgColor({ bg: '#4B4E54', text: '#000' })}
                 className="pt-1"
               >
-                <div className="w-4 h-4 border border-white rounded-full mr-3.5 mt-1 relative overflow-hidden">
+                <div
+                  className={`w-4 h-4 border !border-${
+                    changeTextColor == '#fff' ||
+                    (changeTextColor == '#E24523' && changeBgColor != '#fff')
+                      ? 'white'
+                      : 'black'
+                  } rounded-full mr-3.5 mt-1 relative overflow-hidden`}
+                >
                   <div className="bg-[#4B4E54] absolute w-1/2 h-full"></div>
                   <div className="bg-black absolute right-0 w-1/2 h-full"></div>
                 </div>
@@ -167,16 +232,62 @@ const App = () => {
                 onClick={() => handleBgColor({ bg: '#E24523', text: '#fff' })}
                 className="pt-1"
               >
-                <div className="w-4 h-4 border border-white rounded-full mr-3.5 mt-1 relative overflow-hidden">
+                <div
+                  className={`w-4 h-4 border !border-${
+                    changeTextColor == '#fff' ||
+                    (changeTextColor == '#E24523' && changeBgColor != '#fff')
+                      ? 'white'
+                      : 'black'
+                  } rounded-full mr-3.5 mt-1 relative overflow-hidden`}
+                >
                   <div className="bg-[#E24523] absolute w-1/2 h-full"></div>
                   <div className="bg-white absolute right-0 w-1/2 h-full"></div>
+                </div>
+              </button>
+              <button
+                onClick={() => handleBgColor({ bg: '#fff', text: '#E24523' })}
+                className="pt-1"
+              >
+                <div
+                  className={`w-4 h-4 border !border-${
+                    changeTextColor == '#fff' ||
+                    (changeTextColor == '#E24523' && changeBgColor != '#fff')
+                      ? 'white'
+                      : 'black'
+                  } rounded-full mr-3.5 mt-1 relative overflow-hidden`}
+                >
+                  <div className="bg-white absolute w-1/2 h-full"></div>
+                  <div className="bg-[#E24523] absolute right-0 w-1/2 h-full"></div>
+                </div>
+              </button>
+              <button
+                onClick={() => handleBgColor({ bg: '#000', text: '#E24523' })}
+                className="pt-1"
+              >
+                <div
+                  className={`w-4 h-4 border !border-${
+                    changeTextColor == '#fff' ||
+                    (changeTextColor == '#E24523' && changeBgColor != '#fff')
+                      ? 'white'
+                      : 'black'
+                  } rounded-full mr-3.5 mt-1 relative overflow-hidden`}
+                >
+                  <div className="bg-black absolute w-1/2 h-full"></div>
+                  <div className="bg-[#E24523] absolute right-0 w-1/2 h-full"></div>
                 </div>
               </button>
               <button
                 onClick={() => handleBgColor({ bg: '#4B4E54', text: '#fff' })}
                 className="pt-1"
               >
-                <div className="w-4 h-4 border border-white rounded-full mr-3.5 mt-1 relative overflow-hidden">
+                <div
+                  className={`w-4 h-4 border !border-${
+                    changeTextColor == '#fff' ||
+                    (changeTextColor == '#E24523' && changeBgColor != '#fff')
+                      ? 'white'
+                      : 'black'
+                  } rounded-full mr-3.5 mt-1 relative overflow-hidden`}
+                >
                   <div className="bg-[#4B4E54] absolute w-1/2 h-full"></div>
                   <div className="bg-white absolute right-0 w-1/2 h-full"></div>
                 </div>

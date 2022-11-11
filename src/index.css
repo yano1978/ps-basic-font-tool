@@ -2,6 +2,12 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+*,
+::before,
+::after {
+  border-color: inherit;
+}
+
 html {
   overflow: scroll;
   overflow-x: hidden;
@@ -126,10 +132,17 @@ body {
     }
   }
   /* Override triangle color when color changes */
-  details.grey > summary,
-  details.red > summary {
+  details.grey-black > summary,
+  details.red-black > summary,
+  details.white-black > summary {
     &:before {
       border-color: transparent transparent transparent #000;
+    }
+  }
+  details.white-red > summary,
+  details.black-red > summary {
+    &:before {
+      border-color: transparent transparent transparent #e24523;
     }
   }
 
@@ -171,9 +184,9 @@ body {
     }
   }
   /* Override dropdown styles when color changes */
-  details.grey {
+  details.red-black {
     .font-menu {
-      background: #4b4e54;
+      background: #e24523;
       color: #000;
       input[type='checkbox'] + label:before {
         border: 1px solid #000;
@@ -183,9 +196,21 @@ body {
       }
     }
   }
-  details.grey-white {
+  details.white-black {
     .font-menu {
-      background: #4b4e54;
+      background: #fff;
+      color: #000;
+      input[type='checkbox'] + label:before {
+        border: 1px solid #000;
+      }
+      input[type='checkbox']:checked + label:before {
+        background-color: #000;
+      }
+    }
+  }
+  details.black-white {
+    .font-menu {
+      background: #000;
       color: #fff;
       input[type='checkbox'] + label:before {
         border: 1px solid #fff;
@@ -195,9 +220,9 @@ body {
       }
     }
   }
-  details.red {
+  details.grey-black {
     .font-menu {
-      background: #e24523;
+      background: #4b4e54;
       color: #000;
       input[type='checkbox'] + label:before {
         border: 1px solid #000;
@@ -207,9 +232,49 @@ body {
       }
     }
   }
+
   details.red-white {
     .font-menu {
       background: #e24523;
+      color: #fff;
+      input[type='checkbox'] + label:before {
+        border: 1px solid #fff;
+      }
+      input[type='checkbox']:checked + label:before {
+        background-color: #fff;
+      }
+    }
+  }
+
+  details.white-red {
+    .font-menu {
+      background: #fff;
+      color: #e24523;
+      input[type='checkbox'] + label:before {
+        border: 1px solid #e24523;
+      }
+      input[type='checkbox']:checked + label:before {
+        background-color: #e24523;
+      }
+    }
+  }
+
+  details.black-red {
+    .font-menu {
+      background: #000;
+      color: #e24523;
+      input[type='checkbox'] + label:before {
+        border: 1px solid #e24523;
+      }
+      input[type='checkbox']:checked + label:before {
+        background-color: #e24523;
+      }
+    }
+  }
+
+  details.grey-white {
+    .font-menu {
+      background: #4b4e54;
       color: #fff;
       input[type='checkbox'] + label:before {
         border: 1px solid #fff;
