@@ -4,7 +4,7 @@ import DropdownMenu from './components/FontSizeMenu';
 const App = () => {
   let [changeBgColor, setChangeColor] = useState('');
   let [changeTextColor, setChangeTextColor] = useState('');
-  let [changeDropdownColor, setDropdownColor] = useState('');
+  let [changeDeepColor, setDropdownColor] = useState('');
   const [size, setSize] = useState(230);
   const [spacing, setLetterSpacing] = useState(-18);
   const [leading, setLineHeight] = useState(200);
@@ -40,40 +40,40 @@ const App = () => {
       // bg is black
       if (changeTextColor === '#fff') {
         // text is white
-        changeDropdownColor = 'black-white';
+        changeDeepColor = 'black-white';
       } else {
         // text is red
-        changeDropdownColor = 'black-red';
+        changeDeepColor = 'black-red';
       }
     } else if (changeBgColor === '#E24523') {
       // bg is red
       if (changeTextColor === '#fff') {
         // text is white
-        changeDropdownColor = 'red-white';
+        changeDeepColor = 'red-white';
       } else {
         // text is black
-        changeDropdownColor = 'red-black';
+        changeDeepColor = 'red-black';
       }
     } else if (changeBgColor === '#4B4E54') {
       // bg is grey
       if (changeTextColor === '#fff') {
         // text is white
-        changeDropdownColor = 'grey-white';
+        changeDeepColor = 'grey-white';
       } else {
         // text is black
-        changeDropdownColor = 'grey-black';
+        changeDeepColor = 'grey-black';
       }
     } else {
       // bg is white
       if (changeTextColor === '#000') {
         // text is black
-        changeDropdownColor = 'white-black';
+        changeDeepColor = 'white-black';
       } else {
         // text is red
-        changeDropdownColor = 'white-red';
+        changeDeepColor = 'white-red';
       }
     }
-    setDropdownColor(changeDropdownColor);
+    setDropdownColor(changeDeepColor);
   };
 
   return (
@@ -94,7 +94,7 @@ const App = () => {
         >
           <a href="/">Ps Basic</a>
           <div className="ml-20 tablet:ml-0">
-            <DropdownMenu className={changeDropdownColor} />
+            <DropdownMenu className={changeDeepColor} />
           </div>
           <div
             style={{
@@ -115,7 +115,7 @@ const App = () => {
                   Size: {size + 'px'}
                 </label>
                 <input
-                  className={changeTextColor == '#000' ? 'circle-black' : ''}
+                  className={changeDeepColor}
                   onChange={fontsizeChange}
                   type="range"
                   id="size"
@@ -129,7 +129,7 @@ const App = () => {
                   Kern {spacing + 'px'}
                 </label>
                 <input
-                  className={changeTextColor == '#000' ? 'circle-black' : ''}
+                  className={changeDeepColor}
                   onChange={letterSpacingChange}
                   type="range"
                   id="kern"
@@ -143,7 +143,7 @@ const App = () => {
                   Leading {leading + 'px'}
                 </label>
                 <input
-                  className={changeTextColor == '#000' ? 'circle-black' : ''}
+                  className={changeDeepColor}
                   onChange={lineHeightChange}
                   type="range"
                   id="leading"
