@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import DropdownMenu from './components/FontSizeMenu';
+import DropdownMenu from '@/components/FontSizeMenu';
 
 const App = () => {
   let [changeBgColor, setChangeColor] = useState('');
@@ -9,6 +9,8 @@ const App = () => {
   const [spacing, setLetterSpacing] = useState(-18);
   const [leading, setLineHeight] = useState(200);
   const [show, setShowColors] = useState(false);
+  const [weight, setWeight] = useState(false);
+  const toggleWeight = () => setWeight((hasWeight) => !hasWeight);
 
   const fontsizeChange = (e) => {
     // console.log('setting font size', e.target.value);
@@ -94,7 +96,7 @@ const App = () => {
         >
           <a href="/">PS Basic</a>
           <div className="ml-20 tablet:ml-5">
-            <DropdownMenu className={changeDeepColor} />
+            <DropdownMenu className={changeDeepColor} weight={weight} toggleWeight={toggleWeight} />
           </div>
           <div
             style={{
@@ -316,6 +318,7 @@ const App = () => {
         className="text-white p-3.5 h-full"
       >
         <textarea
+          className={weight ? 'thin' : ''}
           style={{
             fontSize: size + 'px',
             letterSpacing: spacing + 'px',

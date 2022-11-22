@@ -2,6 +2,29 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+/* Font Regular */
+@font-face {
+  font-family: 'RobotoNormal';
+  font-style: normal;
+  font-weight: 400;
+  src: local('RobotoNormal'), url('./assets/fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+/* Font Thin */
+@font-face {
+  font-family: 'RobotoThin';
+  font-style: normal;
+  font-weight: 400;
+  src: local('RobotoThin'), url('./assets/fonts/Roboto-Thin.ttf') format('truetype');
+}
+
+/* Font Bold */
+@font-face {
+  font-family: 'RobotoBold';
+  font-weight: bold;
+  src: local('RobotoBold'), url('./assets/fonts/Roboto-Bold.ttf') format('truetype');
+}
+
 *,
 ::before,
 ::after {
@@ -9,12 +32,18 @@
 }
 
 html {
+  font-family: 'RobotoNormal';
+  font-weight: normal;
   overflow: scroll;
   overflow-x: hidden;
 }
 ::-webkit-scrollbar {
   width: 0;
   background: transparent;
+}
+
+.thin {
+  font-family: 'RobotoThin';
 }
 
 #app {

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const DropdownMenu = ({ className = '' }) => {
+const DropdownMenu = ({ className = '', toggleWeight }) => {
   const [alternative, setAlternative] = useState(false);
   const [ligature, setLigature] = useState(false);
 
@@ -22,8 +22,8 @@ const DropdownMenu = ({ className = '' }) => {
               <div>400</div>
             </div>
             <div className="col-span-2">
-              <ul className="mt-1">
-                <li>440, light</li>
+              <ul className="mt-1 [&_li]:cursor-pointer">
+                <li onClick={toggleWeight}>440, light</li>
                 <li>444, light italic</li>
                 <li>450, semi-light</li>
                 <li>454, semi-light italic</li>
