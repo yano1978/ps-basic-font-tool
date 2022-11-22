@@ -13,7 +13,7 @@ const DropdownMenu = ({ className = '' }) => {
 
   return (
     <details className={className}>
-      <summary>760 - regular</summary>
+      <summary className="absolute left-28 top-[20px] cursor-pointer">760 - regular</summary>
       <div className="font-menu">
         <div className="col">
           <div className="grid grid-cols-3 gap-20">

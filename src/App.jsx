@@ -90,10 +90,10 @@ const App = () => {
             backgroundColor: changeBgColor,
             color: changeTextColor,
           }}
-          className="mx-5  flex flex-wrap justify-start tablet:justify-between items-center text-white"
+          className="mx-5 flex flex-wrap justify-start tablet:justify-between items-center text-white"
         >
-          <a href="/">Ps Basic</a>
-          <div className="ml-20 tablet:ml-0">
+          <a href="/">PS Basic</a>
+          <div className="ml-20 tablet:ml-5">
             <DropdownMenu className={changeDeepColor} />
           </div>
           <div
@@ -110,7 +110,7 @@ const App = () => {
               }}
               className="flex flex-col tablet:flex-row w-full [&_li]:px-1.5 lg:[&_li]:px-5 p-3.5 tablet:p-0 fixed bottom-0 left-0 tablet:relative tablet:top-0 bg-black"
             >
-              <li className="flex">
+              <li className="!pl-0 flex">
                 <label htmlFor="size" className="flex w-full lg:min-w-[100px]">
                   Size: {size + 'px'}
                 </label>

@@ -173,9 +173,6 @@ body {
   /* Details native override */
   details {
     summary {
-      position: relative;
-      right: 2.5rem;
-      cursor: pointer;
       &:before {
         content: '';
         border-width: 0.3rem;
@@ -183,13 +180,26 @@ body {
         border-color: transparent transparent transparent #fff;
         position: absolute;
         top: 0.425rem;
-        right: -1.5rem;
+        right: -1.25rem;
         transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
         transform-origin: 0.2rem 50%;
+        -webkit-transform-origin: 0.2rem 50%;
+        -moz-transform-origin: 0.2rem 50%;
+        -ms-transform-origin: 0.2rem 50%;
+        -o-transform-origin: 0.2rem 50%;
         transition: 0.25s transform ease;
+        -webkit-transition: 0.25s -webkit-transform ease;
+        -moz-transition: 0.25s transform ease;
+        -o-transition: 0.25s transform ease;
       }
-      &::marker {
+      &::marker,
+      &::-webkit-details-marker {
         content: '';
+        display: none;
       }
     }
   }
@@ -211,6 +221,10 @@ body {
   details[open] {
     > summary:before {
       transform: rotate(270deg);
+      -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      -o-transform: rotate(270deg);
     }
     .font-menu {
       z-index: 2;
