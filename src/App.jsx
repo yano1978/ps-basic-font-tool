@@ -83,13 +83,13 @@ const App = () => {
   };
 
   return (
-    <>
+    <div className="flex flex-col h-screen">
       <nav
         style={{
           backgroundColor: changeBgColor,
           color: changeTextColor,
         }}
-        className="py-1"
+        className="py-1 w-full  sticky top-0 bg-black"
       >
         <div
           style={{
@@ -319,7 +319,7 @@ const App = () => {
           backgroundColor: changeBgColor,
           color: changeTextColor,
         }}
-        className="text-white p-3.5 h-full"
+        className="text-white flex-1 overflow-y-scroll"
       >
         <textarea
           className={`max-w-[300px] sm:max-w-full ${weight}`}
@@ -336,7 +336,7 @@ const App = () => {
           placeholder="Type here..."
         ></textarea>
       </main>
-    </>
+    </div>
   );
 };
 

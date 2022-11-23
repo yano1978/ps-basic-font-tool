@@ -64,14 +64,8 @@ html {
   background: transparent;
 }
 
-#app {
-  height: 100%;
-  min-height: 100vh;
-}
-
 body {
   background-color: #000;
-  overflow-x: hidden;
 
   /* Input range native override */
   input[type='range'] {
