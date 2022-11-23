@@ -25,7 +25,7 @@ const DropdownMenu = ({ className = '', toggleWeight }) => {
 
   return (
     <details className={className} open={isOpen} onClick={(e) => onToggle(e)}>
-      <summary className="absolute left-28 top-[20px] cursor-pointer">
+      <summary className="absolute left-28 top-1 tablet:top-2 cursor-pointer">
         {!text ? '760 - regular' : text}
       </summary>
       <div className="font-menu">

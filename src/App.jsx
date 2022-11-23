@@ -89,7 +89,7 @@ const App = () => {
           backgroundColor: changeBgColor,
           color: changeTextColor,
         }}
-        className="py-4"
+        className="py-1"
       >
         <div
           style={{
@@ -116,7 +116,7 @@ const App = () => {
               }}
               className="flex flex-col tablet:flex-row w-full [&_li]:px-1.5 lg:[&_li]:px-5 p-3.5 tablet:p-0 fixed bottom-0 left-0 tablet:relative tablet:top-0 bg-black"
             >
-              <li className="!pl-0 flex">
+              <li className="tablet:!pl-0 flex">
                 <label htmlFor="size" className="flex w-full lg:min-w-[100px]">
                   Size: {size + 'px'}
                 </label>
@@ -322,7 +322,7 @@ const App = () => {
         className="text-white p-3.5 h-full"
       >
         <textarea
-          className={weight}
+          className={`max-w-[300px] sm:max-w-full ${weight}`}
           style={{
             fontSize: size + 'px',
             letterSpacing: spacing + 'px',
