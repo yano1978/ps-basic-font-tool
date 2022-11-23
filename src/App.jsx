@@ -89,7 +89,7 @@ const App = () => {
           backgroundColor: changeBgColor,
           color: changeTextColor,
         }}
-        className="py-1 w-full  sticky top-0 bg-black"
+        className="w-full py-1 sticky top-0 bg-black"
       >
         <div
           style={{
@@ -114,10 +114,13 @@ const App = () => {
                 backgroundColor: changeBgColor,
                 color: changeTextColor,
               }}
-              className="flex flex-col tablet:flex-row w-full [&_li]:px-1.5 lg:[&_li]:px-5 p-3.5 tablet:p-0 fixed bottom-0 left-0 tablet:relative tablet:top-0 bg-black"
+              className="flex flex-col tablet:flex-row w-full px-4 py-2 tablet:px-0 fixed bottom-0 left-0 tablet:relative tablet:top-0 bg-black"
             >
               <li className="tablet:!pl-0 flex">
-                <label htmlFor="size" className="flex w-full lg:min-w-[100px]">
+                <label
+                  htmlFor="size"
+                  className="flex w-full max-w-[85px] min-w-[95px] tablet:max-w-full"
+                >
                   Size: {size + 'px'}
                 </label>
                 <input
@@ -130,8 +133,11 @@ const App = () => {
                   max="230"
                 />
               </li>
-              <li className="flex">
-                <label htmlFor="kern" className="flex w-full lg:min-w-[100px]">
+              <li className="flex ml-0 tablet:ml-7">
+                <label
+                  htmlFor="kern"
+                  className="flex w-full max-w-[80px] min-w-[95px] tablet:min-w-[90px]"
+                >
                   Kern {spacing + 'px'}
                 </label>
                 <input
@@ -144,8 +150,11 @@ const App = () => {
                   max="100"
                 />
               </li>
-              <li className="flex">
-                <label htmlFor="leading" className="flex w-full lg:min-w-[100px]">
+              <li className="flex ml-0 tablet:ml-7">
+                <label
+                  htmlFor="leading"
+                  className="flex w-full max-w-[110px] min-w-[120px] tablet:min-w-[120px]"
+                >
                   Leading {leading + 'px'}
                 </label>
                 <input
@@ -322,7 +331,7 @@ const App = () => {
         className="text-white flex-1 overflow-y-scroll"
       >
         <textarea
-          className={`max-w-[300px] sm:max-w-full ${weight}`}
+          className={`max-w-[300px] min-h-full sm:max-w-full px-4 ${weight}`}
           style={{
             fontSize: size + 'px',
             letterSpacing: spacing + 'px',
