@@ -9,8 +9,12 @@ const App = () => {
   const [spacing, setLetterSpacing] = useState(-18);
   const [leading, setLineHeight] = useState(200);
   const [show, setShowColors] = useState(false);
-  const [weight, setWeight] = useState(false);
-  const toggleWeight = () => setWeight((hasWeight) => !hasWeight);
+  let [weight, setWeight] = useState('');
+
+  const toggleWeight = (value) => {
+    weight = value;
+    setWeight(weight);
+  };
 
   const fontsizeChange = (e) => {
     // console.log('setting font size', e.target.value);
@@ -318,7 +322,7 @@ const App = () => {
         className="text-white p-3.5 h-full"
       >
         <textarea
-          className={weight ? 'thin' : ''}
+          className={weight}
           style={{
             fontSize: size + 'px',
             letterSpacing: spacing + 'px',

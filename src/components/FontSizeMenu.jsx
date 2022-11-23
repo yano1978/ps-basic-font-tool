@@ -1,8 +1,10 @@
 import { useState } from 'react';
 
 const DropdownMenu = ({ className = '', toggleWeight }) => {
+  let [isOpen, setIsOpen] = useState();
   const [alternative, setAlternative] = useState(false);
   const [ligature, setLigature] = useState(false);
+  let [text, setText] = useState('');
 
   const handleAnternative = () => {
     setAlternative(!alternative);
@@ -11,9 +13,21 @@ const DropdownMenu = ({ className = '', toggleWeight }) => {
     setLigature(!ligature);
   };
 
+  const changeValueAndCloseMenu = (value) => {
+    text = value.text;
+    setText(text);
+  };
+
+  const onToggle = (e) => {
+    e.preventDefault();
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <details className={className}>
-      <summary className="absolute left-28 top-[20px] cursor-pointer">760 - regular</summary>
+    <details className={className} open={isOpen} onClick={(e) => onToggle(e)}>
+      <summary className="absolute left-28 top-[20px] cursor-pointer">
+        {!text ? '760 - regular' : text}
+      </summary>
       <div className="font-menu">
         <div className="col">
           <div className="grid grid-cols-3 gap-20">
@@ -23,8 +37,24 @@ const DropdownMenu = ({ className = '', toggleWeight }) => {
             </div>
             <div className="col-span-2">
               <ul className="mt-1 [&_li]:cursor-pointer">
-                <li onClick={toggleWeight}>440, light</li>
-                <li>444, light italic</li>
+                <li
+                  onClick={(e) => {
+                    toggleWeight('light');
+                    changeValueAndCloseMenu({ text: '440 - light' });
+                    onToggle(e);
+                  }}
+                >
+                  440, light
+                </li>
+                <li
+                  onClick={(e) => {
+                    toggleWeight('light-italic');
+                    changeValueAndCloseMenu({ text: '444 - light italic' });
+                    onToggle(e);
+                  }}
+                >
+                  444, light italic
+                </li>
                 <li>450, semi-light</li>
                 <li>454, semi-light italic</li>
                 <li>460, regular</li>
@@ -33,8 +63,24 @@ const DropdownMenu = ({ className = '', toggleWeight }) => {
                 <li>474, medium italic</li>
                 <li>480, semi-bold</li>
                 <li>484, semi-bold italic</li>
-                <li>490, bold</li>
-                <li>494, bold italic</li>
+                <li
+                  onClick={(e) => {
+                    toggleWeight('bold');
+                    changeValueAndCloseMenu({ text: '490 - bold' });
+                    onToggle(e);
+                  }}
+                >
+                  490, bold
+                </li>
+                <li
+                  onClick={(e) => {
+                    toggleWeight('bold-italic');
+                    changeValueAndCloseMenu({ text: '494 - bold italic' });
+                    onToggle(e);
+                  }}
+                >
+                  494, bold italic
+                </li>
               </ul>
             </div>
           </div>

@@ -10,6 +10,21 @@
   src: local('RobotoNormal'), url('./assets/fonts/Roboto-Regular.ttf') format('truetype');
 }
 
+/* Font Light */
+@font-face {
+  font-family: 'RobotoLight';
+  font-style: normal;
+  font-weight: 400;
+  src: local('RobotoLight'), url('./assets/fonts/Roboto-Light.ttf') format('truetype');
+}
+/* Font Light Italic */
+@font-face {
+  font-family: 'RobotoLightItalic';
+  font-style: normal;
+  font-weight: 400;
+  src: local('RobotoLightItalic'), url('./assets/fonts/Roboto-LightItalic.ttf') format('truetype');
+}
+
 /* Font Thin */
 @font-face {
   font-family: 'RobotoThin';
@@ -23,6 +38,13 @@
   font-family: 'RobotoBold';
   font-weight: bold;
   src: local('RobotoBold'), url('./assets/fonts/Roboto-Bold.ttf') format('truetype');
+}
+
+/* Font Bold Italic */
+@font-face {
+  font-family: 'RobotoBoldItalic';
+  font-weight: bold;
+  src: local('RobotoBoldItalic'), url('./assets/fonts/Roboto-BoldItalic.ttf') format('truetype');
 }
 
 *,
@@ -40,10 +62,6 @@ html {
 ::-webkit-scrollbar {
   width: 0;
   background: transparent;
-}
-
-.thin {
-  font-family: 'RobotoThin';
 }
 
 #app {
@@ -388,5 +406,18 @@ body {
         background-color: #fff;
       }
     }
+  }
+  /* Font weight modifiers */
+  .light {
+    font-family: 'RobotoLight';
+  }
+  .light-italic {
+    font-family: 'RobotoLightItalic';
+  }
+  .bold {
+    font-family: 'RobotoBold';
+  }
+  .bold-italic {
+    font-family: 'RobotoBoldItalic';
   }
 }
