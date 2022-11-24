@@ -26,7 +26,7 @@ const DropdownMenu = ({ className = '', toggleWeight }) => {
   return (
     <details className={className} open={isOpen} onClick={(e) => onToggle(e)}>
       <summary className="absolute left-28 top-1 tablet:top-[12.5px] cursor-pointer">
-        {!text ? '760 - regular' : text}
+        {!text ? '640 - regular' : text}
       </summary>
       <div className="font-menu">
         <div className="col">
@@ -37,24 +37,8 @@ const DropdownMenu = ({ className = '', toggleWeight }) => {
             </div>
             <div className="col-span-2">
               <ul className="mt-1 [&_li]:cursor-pointer">
-                <li
-                  onClick={(e) => {
-                    toggleWeight('light');
-                    changeValueAndCloseMenu({ text: '440 - light' });
-                    onToggle(e);
-                  }}
-                >
-                  440, light
-                </li>
-                <li
-                  onClick={(e) => {
-                    toggleWeight('light-italic');
-                    changeValueAndCloseMenu({ text: '444 - light italic' });
-                    onToggle(e);
-                  }}
-                >
-                  444, light italic
-                </li>
+                <li>440, light</li>
+                <li>444, light italic</li>
                 <li>450, semi-light</li>
                 <li>454, semi-light italic</li>
                 <li>460, regular</li>
@@ -63,24 +47,8 @@ const DropdownMenu = ({ className = '', toggleWeight }) => {
                 <li>474, medium italic</li>
                 <li>480, semi-bold</li>
                 <li>484, semi-bold italic</li>
-                <li
-                  onClick={(e) => {
-                    toggleWeight('bold');
-                    changeValueAndCloseMenu({ text: '490 - bold' });
-                    onToggle(e);
-                  }}
-                >
-                  490, bold
-                </li>
-                <li
-                  onClick={(e) => {
-                    toggleWeight('bold-italic');
-                    changeValueAndCloseMenu({ text: '494 - bold italic' });
-                    onToggle(e);
-                  }}
-                >
-                  494, bold italic
-                </li>
+                <li>490, bold</li>
+                <li>494, bold italic</li>
               </ul>
             </div>
           </div>
@@ -116,19 +84,115 @@ const DropdownMenu = ({ className = '', toggleWeight }) => {
               <div>600</div>
             </div>
             <div className="col-span-2">
-              <ul className="mt-1">
-                <li>640, light</li>
-                <li>644, light italic</li>
-                <li>650, semi-light</li>
-                <li>654, semi-light italic</li>
-                <li>660, regular</li>
-                <li>664, regular italic</li>
-                <li>670, medium</li>
-                <li>674, medium italic</li>
-                <li>680, semi-bold</li>
-                <li>684, semi-bold italic</li>
-                <li>690, bold</li>
-                <li>694, bold italic</li>
+              <ul className="mt-1 [&_li]:cursor-pointer">
+                <li
+                  onClick={(e) => {
+                    toggleWeight('PSBasic1200-640Light');
+                    changeValueAndCloseMenu({ text: '640 - light' });
+                    onToggle(e);
+                  }}
+                >
+                  640, light
+                </li>
+                <li
+                  onClick={(e) => {
+                    toggleWeight('PSBasic1200-644LightItalic');
+                    changeValueAndCloseMenu({ text: '644 - light italic' });
+                    onToggle(e);
+                  }}
+                >
+                  644, light italic
+                </li>
+                <li
+                  onClick={(e) => {
+                    toggleWeight('PSBasic1200-650Semi-Light');
+                    changeValueAndCloseMenu({ text: '650 - semi-light' });
+                    onToggle(e);
+                  }}
+                >
+                  650, semi-light
+                </li>
+                <li
+                  onClick={(e) => {
+                    toggleWeight('PSBasic1200-654Semi-LightItalic');
+                    changeValueAndCloseMenu({ text: '654 - semi-light italic' });
+                    onToggle(e);
+                  }}
+                >
+                  654, semi-light italic
+                </li>
+                <li
+                  onClick={(e) => {
+                    toggleWeight('PSBasic1200-660Regular');
+                    changeValueAndCloseMenu({ text: '660 - regular' });
+                    onToggle(e);
+                  }}
+                >
+                  660, regular
+                </li>
+                <li
+                  onClick={(e) => {
+                    toggleWeight('PSBasic1200-664RegularItalic');
+                    changeValueAndCloseMenu({ text: '664 - regular italic' });
+                    onToggle(e);
+                  }}
+                >
+                  664, regular italic
+                </li>
+                <li
+                  onClick={(e) => {
+                    toggleWeight('PSBasic1200-670Medium');
+                    changeValueAndCloseMenu({ text: '670 - medium' });
+                    onToggle(e);
+                  }}
+                >
+                  670, medium
+                </li>
+                <li
+                  onClick={(e) => {
+                    toggleWeight('PSBasic1200-674MediumItalic');
+                    changeValueAndCloseMenu({ text: '674 - medium italic' });
+                    onToggle(e);
+                  }}
+                >
+                  674, medium italic
+                </li>
+                <li
+                  onClick={(e) => {
+                    toggleWeight('PSBasic1200-680Semi-Bold');
+                    changeValueAndCloseMenu({ text: '680 - semi-bold' });
+                    onToggle(e);
+                  }}
+                >
+                  680, semi-bold
+                </li>
+                <li
+                  onClick={(e) => {
+                    toggleWeight('PSBasic1200-684Semi-BoldItalic');
+                    changeValueAndCloseMenu({ text: '684 - semi-bold italic' });
+                    onToggle(e);
+                  }}
+                >
+                  684, semi-bold italic
+                </li>
+                <li
+                  onClick={(e) => {
+                    toggleWeight('PSBasic1200-690Bold');
+                    changeValueAndCloseMenu({ text: '690 - bold' });
+                    onToggle(e);
+                  }}
+                >
+                  690, bold
+                </li>
+                <li
+                  onClick={(e) => {
+                    toggleWeight('PSBasic1200-694BoldItalic');
+                    changeValueAndCloseMenu({ text: '694 - bold italic' });
+                    onToggle(e);
+                  }}
+                >
+                  694, bold italic
+                </li>
               </ul>
             </div>
           </div>

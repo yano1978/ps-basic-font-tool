@@ -4,47 +4,117 @@
 
 /* Font Regular */
 @font-face {
-  font-family: 'RobotoNormal';
+  font-family: 'PSBasic1200-660Regular';
   font-style: normal;
   font-weight: 400;
-  src: local('RobotoNormal'), url('./assets/fonts/Roboto-Regular.ttf') format('truetype');
+  src: local('PSBasic1200-660Regular'),
+    url('./assets/fonts/PSBasic1200-660Regular.otf') format('opentype');
 }
 
 /* Font Light */
 @font-face {
-  font-family: 'RobotoLight';
+  font-family: 'PSBasic1200-640Light';
   font-style: normal;
   font-weight: 400;
-  src: local('RobotoLight'), url('./assets/fonts/Roboto-Light.ttf') format('truetype');
-}
-/* Font Light Italic */
-@font-face {
-  font-family: 'RobotoLightItalic';
-  font-style: normal;
-  font-weight: 400;
-  src: local('RobotoLightItalic'), url('./assets/fonts/Roboto-LightItalic.ttf') format('truetype');
+  src: local('PSBasic1200-640Light'),
+    url('./assets/fonts/PSBasic1200-640Light.otf') format('opentype');
 }
 
-/* Font Thin */
+/* Font Light Italic */
 @font-face {
-  font-family: 'RobotoThin';
+  font-family: 'PSBasic1200-644LightItalic';
   font-style: normal;
   font-weight: 400;
-  src: local('RobotoThin'), url('./assets/fonts/Roboto-Thin.ttf') format('truetype');
+  src: local('PSBasic1200-644LightItalic'),
+    url('./assets/fonts/PSBasic1200-644LightItalic.otf') format('opentype');
+}
+
+/* Font Semi Light */
+@font-face {
+  font-family: 'PSBasic1200-650Semi-Light';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PSBasic1200-650Semi-Light'),
+    url('./assets/fonts/PSBasic1200-650Semi-Light.otf') format('opentype');
+}
+
+/* Font Semi Light Italic */
+@font-face {
+  font-family: 'PSBasic1200-654Semi-LightItalic';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PSBasic1200-654Semi-LightItalic'),
+    url('./assets/fonts/PSBasic1200-654Semi-LightItalic.otf') format('opentype');
+}
+
+/* Font Regular */
+@font-face {
+  font-family: 'PSBasic1200-660Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PSBasic1200-660Regular'),
+    url('./assets/fonts/PSBasic1200-660Regular.otf') format('opentype');
+}
+
+/* Font Regular Italic */
+@font-face {
+  font-family: 'PSBasic1200-664RegularItalic';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PSBasic1200-664RegularItalic'),
+    url('./assets/fonts/PSBasic1200-664RegularItalic.otf') format('opentype');
+}
+
+/* Font Medium */
+@font-face {
+  font-family: 'PSBasic1200-670Medium';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PSBasic1200-670Medium'),
+    url('./assets/fonts/PSBasic1200-670Medium.otf') format('opentype');
+}
+
+/* Font Medium Italic */
+@font-face {
+  font-family: 'PSBasic1200-674MediumItalic';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PSBasic1200-674MediumItalic'),
+    url('./assets/fonts/PSBasic1200-674MediumItalic.otf') format('opentype');
+}
+
+/* Font Semi Bold */
+@font-face {
+  font-family: 'PSBasic1200-680Semi-Bold';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PSBasic1200-680Semi-Bold'),
+    url('./assets/fonts/PSBasic1200-680Semi-Bold.otf') format('opentype');
+}
+
+/* Font Semi Bold Italic */
+@font-face {
+  font-family: 'PSBasic1200-684Semi-BoldItalic';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PSBasic1200-684Semi-BoldItalic'),
+    url('./assets/fonts/PSBasic1200-684Semi-BoldItalic.otf') format('opentype');
 }
 
 /* Font Bold */
 @font-face {
-  font-family: 'RobotoBold';
+  font-family: 'PSBasic1200-690Bold';
   font-weight: bold;
-  src: local('RobotoBold'), url('./assets/fonts/Roboto-Bold.ttf') format('truetype');
+  src: local('PSBasic1200-690Bold'),
+    url('./assets/fonts/PSBasic1200-690Bold.otf') format('opentype');
 }
 
 /* Font Bold Italic */
 @font-face {
-  font-family: 'RobotoBoldItalic';
+  font-family: 'PSBasic1200-694BoldItalic';
   font-weight: bold;
-  src: local('RobotoBoldItalic'), url('./assets/fonts/Roboto-BoldItalic.ttf') format('truetype');
+  src: local('PSBasic1200-694BoldItalic'),
+    url('./assets/fonts/PSBasic1200-694BoldItalic.otf') format('opentype');
 }
 
 *,
@@ -54,7 +124,7 @@
 }
 
 html {
-  font-family: 'RobotoNormal';
+  font-family: 'PSBasic1200-660Regular';
   font-weight: normal;
   overflow: scroll;
   overflow-x: hidden;
@@ -402,16 +472,40 @@ body {
     }
   }
   /* Font weight modifiers */
-  .light {
-    font-family: 'RobotoLight';
+  .PSBasic1200-640Light {
+    font-family: 'PSBasic1200-640Light';
   }
-  .light-italic {
-    font-family: 'RobotoLightItalic';
+  .PSBasic1200-644LightItalic {
+    font-family: 'PSBasic1200-644LightItalic';
   }
-  .bold {
-    font-family: 'RobotoBold';
+  .PSBasic1200-650Semi-Light {
+    font-family: 'PSBasic1200-650Semi-Light';
   }
-  .bold-italic {
-    font-family: 'RobotoBoldItalic';
+  .PSBasic1200-654Semi-LightItalic {
+    font-family: 'PSBasic1200-654Semi-LightItalic';
+  }
+  .PSBasic1200-664RegularItalic {
+    font-family: 'PSBasic1200-664RegularItalic';
+  }
+  .PSBasic1200-660Regular {
+    font-family: 'PSBasic1200-660Regular';
+  }
+  .PSBasic1200-670Medium {
+    font-family: 'PSBasic1200-670Medium';
+  }
+  .PSBasic1200-674MediumItalic {
+    font-family: 'PSBasic1200-674MediumItalic';
+  }
+  .PSBasic1200-680Semi-Bold {
+    font-family: 'PSBasic1200-680Semi-Bold';
+  }
+  .PSBasic1200-684Semi-BoldItalic {
+    font-family: 'PSBasic1200-684Semi-BoldItalic';
+  }
+  .PSBasic1200-690Bold {
+    font-family: 'PSBasic1200-690Bold';
+  }
+  .PSBasic1200-694BoldItalic {
+    font-family: 'PSBasic1200-694BoldItalic';
   }
 }
