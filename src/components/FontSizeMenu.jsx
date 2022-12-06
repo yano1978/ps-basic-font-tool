@@ -1,10 +1,89 @@
 import { useState } from 'react';
+import FontLink from '@/components/FontLink';
 
 const DropdownMenu = ({ className = '', toggleWeight }) => {
+  const [active, setActive] = useState(null);
+  const setLinkActive = (id) => {
+    setActive(id);
+  };
   let [isOpen, setIsOpen] = useState();
   const [alternative, setAlternative] = useState(false);
   const [ligature, setLigature] = useState(false);
   let [text, setText] = useState('');
+  const [dataNarrow400Fonts, setDataNarrow400Fonts] = useState([
+    {
+      id: 1,
+      fontTitle: '440, light',
+      fontClass: '',
+      fontClicked: false,
+    },
+    {
+      id: 2,
+      fontTitle: '444, light italic',
+      fontClass: '',
+      fontClicked: false,
+    },
+    {
+      id: 3,
+      fontTitle: '450, semi-light',
+      fontClass: '',
+      fontClicked: false,
+    },
+    {
+      id: 4,
+      fontTitle: '454, semi-light italic',
+      fontClass: '',
+      fontClicked: false,
+    },
+    {
+      id: 5,
+      fontTitle: '460, regular',
+      fontClass: '',
+      fontClicked: false,
+    },
+    {
+      id: 6,
+      fontTitle: '464, regular italic',
+      fontClass: '',
+      fontClicked: false,
+    },
+    {
+      id: 7,
+      fontTitle: '470, medium',
+      fontClass: '',
+      fontClicked: false,
+    },
+    {
+      id: 8,
+      fontTitle: '474, medium italic',
+      fontClass: '',
+      fontClicked: false,
+    },
+    {
+      id: 9,
+      fontTitle: '480, semi-bold',
+      fontClass: '',
+      fontClicked: false,
+    },
+    {
+      id: 10,
+      fontTitle: '484, semi-bold italic',
+      fontClass: '',
+      fontClicked: false,
+    },
+    {
+      id: 11,
+      fontTitle: '490, bold',
+      fontClass: '',
+      fontClicked: false,
+    },
+    {
+      id: 12,
+      fontTitle: '494, bold italic',
+      fontClass: '',
+      fontClicked: false,
+    },
+  ]);
 
   const handleAnternative = () => {
     setAlternative(!alternative);
@@ -37,18 +116,15 @@ const DropdownMenu = ({ className = '', toggleWeight }) => {
             </div>
             <div className="col-span-2">
               <ul className="mt-1 [&_li]:cursor-pointer">
-                <li>440, light</li>
-                <li>444, light italic</li>
-                <li>450, semi-light</li>
-                <li>454, semi-light italic</li>
-                <li>460, regular</li>
-                <li>464, regular italic</li>
-                <li>470, medium</li>
-                <li>474, medium italic</li>
-                <li>480, semi-bold</li>
-                <li>484, semi-bold italic</li>
-                <li>490, bold</li>
-                <li>494, bold italic</li>
+                {dataNarrow400Fonts.map((item) => (
+                  <li key={item.id}>
+                    <FontLink
+                      {...item}
+                      isActive={active === item.id}
+                      setLinkActive={setLinkActive}
+                    />
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
