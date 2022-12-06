@@ -206,7 +206,7 @@
 }
 
 html {
-  font-family: 'PSBasic1200-660Regular';
+  font-family: 'PSBasic1200-670Medium';
   font-weight: normal;
   overflow: scroll;
   overflow-x: hidden;
@@ -420,6 +420,7 @@ body {
       -o-transform: rotate(270deg);
     }
     .font-menu {
+      font-family: 'PSBasic1200-760Regular';
       z-index: 2;
       min-height: 750px;
       display: flex;
