@@ -4,198 +4,187 @@
 
 /* Font Regular */
 @font-face {
-  font-family: 'PSBasic1200-660Regular';
+  font-family: '660Regular';
   font-style: normal;
   font-weight: 400;
-  src: local('PSBasic1200-660Regular'),
-    url('./assets/fonts/PSBasic1200-660Regular.otf') format('opentype');
+  src: local('660Regular'), url('./assets/fonts/PSBasic1200-660Regular.otf') format('opentype');
 }
 
 /* Font Light */
 @font-face {
-  font-family: 'PSBasic1200-640Light';
+  font-family: '640Light';
   font-style: normal;
   font-weight: 400;
-  src: local('PSBasic1200-640Light'),
-    url('./assets/fonts/PSBasic1200-640Light.otf') format('opentype');
+  src: local('640Light'), url('./assets/fonts/PSBasic1200-640Light.otf') format('opentype');
 }
 @font-face {
-  font-family: 'PSBasic1200-740Light';
+  font-family: '740Light';
   font-style: normal;
   font-weight: 400;
-  src: local('PSBasic1200-740Light'),
-    url('./assets/fonts/PSBasic1200-740Light.otf') format('opentype');
+  src: local('740Light'), url('./assets/fonts/PSBasic1200-740Light.otf') format('opentype');
 }
 
 /* Font Light Italic */
 @font-face {
-  font-family: 'PSBasic1200-644LightItalic';
+  font-family: '644LightItalic';
   font-style: normal;
   font-weight: 400;
-  src: local('PSBasic1200-644LightItalic'),
+  src: local('644LightItalic'),
     url('./assets/fonts/PSBasic1200-644LightItalic.otf') format('opentype');
 }
 @font-face {
-  font-family: 'PSBasic1200-744LightItalic';
+  font-family: '744LightItalic';
   font-style: normal;
   font-weight: 400;
-  src: local('PSBasic1200-744LightItalic'),
+  src: local('744LightItalic'),
     url('./assets/fonts/PSBasic1200-744LightItalic.otf') format('opentype');
 }
 
 /* Font Semi Light */
 @font-face {
-  font-family: 'PSBasic1200-650Semi-Light';
+  font-family: '650Semi-Light';
   font-style: normal;
   font-weight: 400;
-  src: local('PSBasic1200-650Semi-Light'),
+  src: local('650Semi-Light'),
     url('./assets/fonts/PSBasic1200-650Semi-Light.otf') format('opentype');
 }
 @font-face {
-  font-family: 'PSBasic1200-750Semi-Light';
+  font-family: '750Semi-Light';
   font-style: normal;
   font-weight: 400;
-  src: local('PSBasic1200-750Semi-Light'),
+  src: local('750Semi-Light'),
     url('./assets/fonts/PSBasic1200-750Semi-Light.otf') format('opentype');
 }
 
 /* Font Semi Light Italic */
 @font-face {
-  font-family: 'PSBasic1200-654Semi-LightItalic';
+  font-family: '654Semi-LightItalic';
   font-style: normal;
   font-weight: 400;
-  src: local('PSBasic1200-654Semi-LightItalic'),
+  src: local('654Semi-LightItalic'),
     url('./assets/fonts/PSBasic1200-654Semi-LightItalic.otf') format('opentype');
 }
 @font-face {
-  font-family: 'PSBasic1200-754Semi-LightItalic';
+  font-family: '754Semi-LightItalic';
   font-style: normal;
   font-weight: 400;
-  src: local('PSBasic1200-754Semi-LightItalic'),
+  src: local('754Semi-LightItalic'),
     url('./assets/fonts/PSBasic1200-754Semi-LightItalic.otf') format('opentype');
 }
 
 /* Font Regular */
 @font-face {
-  font-family: 'PSBasic1200-660Regular';
+  font-family: '660Regular';
   font-style: normal;
   font-weight: 400;
-  src: local('PSBasic1200-660Regular'),
-    url('./assets/fonts/PSBasic1200-660Regular.otf') format('opentype');
+  src: local('660Regular'), url('./assets/fonts/PSBasic1200-660Regular.otf') format('opentype');
 }
 @font-face {
-  font-family: 'PSBasic1200-760Regular';
+  font-family: '760Regular';
   font-style: normal;
   font-weight: 400;
-  src: local('PSBasic1200-760Regular'),
-    url('./assets/fonts/PSBasic1200-760Regular.otf') format('opentype');
+  src: local('760Regular'), url('./assets/fonts/PSBasic1200-760Regular.otf') format('opentype');
 }
 
 /* Font Regular Italic */
 @font-face {
-  font-family: 'PSBasic1200-664RegularItalic';
+  font-family: '664RegularItalic';
   font-style: normal;
   font-weight: 400;
-  src: local('PSBasic1200-664RegularItalic'),
+  src: local('664RegularItalic'),
     url('./assets/fonts/PSBasic1200-664RegularItalic.otf') format('opentype');
 }
 @font-face {
-  font-family: 'PSBasic1200-764RegularItalic';
+  font-family: '764RegularItalic';
   font-style: normal;
   font-weight: 400;
-  src: local('PSBasic1200-764RegularItalic'),
+  src: local('764RegularItalic'),
     url('./assets/fonts/PSBasic1200-764RegularItalic.otf') format('opentype');
 }
 
 /* Font Medium */
 @font-face {
-  font-family: 'PSBasic1200-670Medium';
+  font-family: '670Medium';
   font-style: normal;
   font-weight: 400;
-  src: local('PSBasic1200-670Medium'),
-    url('./assets/fonts/PSBasic1200-670Medium.otf') format('opentype');
+  src: local('670Medium'), url('./assets/fonts/PSBasic1200-670Medium.otf') format('opentype');
 }
 @font-face {
-  font-family: 'PSBasic1200-770Medium';
+  font-family: '770Medium';
   font-style: normal;
   font-weight: 400;
-  src: local('PSBasic1200-770Medium'),
-    url('./assets/fonts/PSBasic1200-770Medium.otf') format('opentype');
+  src: local('770Medium'), url('./assets/fonts/PSBasic1200-770Medium.otf') format('opentype');
 }
 
 /* Font Medium Italic */
 @font-face {
-  font-family: 'PSBasic1200-674MediumItalic';
+  font-family: '674MediumItalic';
   font-style: normal;
   font-weight: 400;
-  src: local('PSBasic1200-674MediumItalic'),
+  src: local('674MediumItalic'),
     url('./assets/fonts/PSBasic1200-674MediumItalic.otf') format('opentype');
 }
 @font-face {
-  font-family: 'PSBasic1200-774MediumItalic';
+  font-family: '774MediumItalic';
   font-style: normal;
   font-weight: 400;
-  src: local('PSBasic1200-774MediumItalic'),
+  src: local('774MediumItalic'),
     url('./assets/fonts/PSBasic1200-774MediumItalic.otf') format('opentype');
 }
 
 /* Font Semi Bold */
 @font-face {
-  font-family: 'PSBasic1200-680Semi-Bold';
+  font-family: '680Semi-Bold';
   font-style: normal;
   font-weight: 400;
-  src: local('PSBasic1200-680Semi-Bold'),
-    url('./assets/fonts/PSBasic1200-680Semi-Bold.otf') format('opentype');
+  src: local('680Semi-Bold'), url('./assets/fonts/PSBasic1200-680Semi-Bold.otf') format('opentype');
 }
 @font-face {
-  font-family: 'PSBasic1200-780Semi-Bold';
+  font-family: '780Semi-Bold';
   font-style: normal;
   font-weight: 400;
-  src: local('PSBasic1200-780Semi-Bold'),
-    url('./assets/fonts/PSBasic1200-780Semi-Bold.otf') format('opentype');
+  src: local('780Semi-Bold'), url('./assets/fonts/PSBasic1200-780Semi-Bold.otf') format('opentype');
 }
 
 /* Font Semi Bold Italic */
 @font-face {
-  font-family: 'PSBasic1200-684Semi-BoldItalic';
+  font-family: '684Semi-BoldItalic';
   font-style: normal;
   font-weight: 400;
-  src: local('PSBasic1200-684Semi-BoldItalic'),
+  src: local('684Semi-BoldItalic'),
     url('./assets/fonts/PSBasic1200-684Semi-BoldItalic.otf') format('opentype');
 }
 @font-face {
-  font-family: 'PSBasic1200-784Semi-BoldItalic';
+  font-family: '784Semi-BoldItalic';
   font-style: normal;
   font-weight: 400;
-  src: local('PSBasic1200-784Semi-BoldItalic'),
+  src: local('784Semi-BoldItalic'),
     url('./assets/fonts/PSBasic1200-784Semi-BoldItalic.otf') format('opentype');
 }
 
 /* Font Bold */
 @font-face {
-  font-family: 'PSBasic1200-690Bold';
+  font-family: '690Bold';
   font-weight: bold;
-  src: local('PSBasic1200-690Bold'),
-    url('./assets/fonts/PSBasic1200-690Bold.otf') format('opentype');
+  src: local('690Bold'), url('./assets/fonts/PSBasic1200-690Bold.otf') format('opentype');
 }
 @font-face {
-  font-family: 'PSBasic1200-790Bold';
+  font-family: '790Bold';
   font-weight: bold;
-  src: local('PSBasic1200-790Bold'),
-    url('./assets/fonts/PSBasic1200-790Bold.otf') format('opentype');
+  src: local('790Bold'), url('./assets/fonts/PSBasic1200-790Bold.otf') format('opentype');
 }
 
 /* Font Bold Italic */
 @font-face {
-  font-family: 'PSBasic1200-694BoldItalic';
+  font-family: '694BoldItalic';
   font-weight: bold;
-  src: local('PSBasic1200-694BoldItalic'),
+  src: local('694BoldItalic'),
     url('./assets/fonts/PSBasic1200-694BoldItalic.otf') format('opentype');
 }
 @font-face {
-  font-family: 'PSBasic1200-794BoldItalic';
+  font-family: '794BoldItalic';
   font-weight: bold;
-  src: local('PSBasic1200-794BoldItalic'),
+  src: local('794BoldItalic'),
     url('./assets/fonts/PSBasic1200-794BoldItalic.otf') format('opentype');
 }
 
@@ -206,7 +195,7 @@
 }
 
 html {
-  font-family: 'PSBasic1200-670Medium';
+  font-family: '670Medium';
   font-weight: normal;
   overflow: scroll;
   overflow-x: hidden;
@@ -420,7 +409,7 @@ body {
       -o-transform: rotate(270deg);
     }
     .font-menu {
-      font-family: 'PSBasic1200-760Regular';
+      font-family: '760Regular';
       z-index: 2;
       min-height: 750px;
       display: flex;
@@ -435,12 +424,15 @@ body {
       color: #fff;
       .col {
         width: 33.3333%;
-        ul > li > a.active {
-          border-bottom: 2px solid #fff;
-        }
       }
     }
   }
+
+  /* Font active */
+  .active {
+    border-bottom: 2px solid #fff;
+  }
+
   /* Details animation */
   details[open] summary ~ * {
     animation: sweep 0.5s ease-in-out;
@@ -467,6 +459,9 @@ body {
       input[type='checkbox']:checked + label:before {
         background-color: #000;
       }
+      .col ul > li > a.active {
+        border-bottom: 2px solid #000;
+      }
     }
   }
   details.white-black {
@@ -478,6 +473,9 @@ body {
       }
       input[type='checkbox']:checked + label:before {
         background-color: #000;
+      }
+      .col ul > li > a.active {
+        border-bottom: 2px solid #000;
       }
     }
   }
@@ -502,6 +500,9 @@ body {
       }
       input[type='checkbox']:checked + label:before {
         background-color: #000;
+      }
+      .col ul > li > a.active {
+        border-bottom: 2px solid #000;
       }
     }
   }
@@ -529,6 +530,9 @@ body {
       input[type='checkbox']:checked + label:before {
         background-color: #e24523;
       }
+      .col ul > li > a.active {
+        border-bottom: 2px solid #e24523;
+      }
     }
   }
 
@@ -541,6 +545,9 @@ body {
       }
       input[type='checkbox']:checked + label:before {
         background-color: #e24523;
+      }
+      .col ul > li > a.active {
+        border-bottom: 2px solid #e24523;
       }
     }
   }
@@ -559,75 +566,75 @@ body {
   }
   /* Font weight modifiers */
   .PSBasic1200-640Light {
-    font-family: 'PSBasic1200-640Light';
+    font-family: '640Light';
   }
   .PSBasic1200-740Light {
-    font-family: 'PSBasic1200-740Light';
+    font-family: '740Light';
   }
   .PSBasic1200-744LightItalic {
-    font-family: 'PSBasic1200-744LightItalic';
+    font-family: '744LightItalic';
   }
   .PSBasic1200-644LightItalic {
-    font-family: 'PSBasic1200-644LightItalic';
+    font-family: '644LightItalic';
   }
   .PSBasic1200-650Semi-Light {
-    font-family: 'PSBasic1200-650Semi-Light';
+    font-family: '650Semi-Light';
   }
   .PSBasic1200-750Semi-Light {
-    font-family: 'PSBasic1200-750Semi-Light';
+    font-family: '750Semi-Light';
   }
   .PSBasic1200-654Semi-LightItalic {
-    font-family: 'PSBasic1200-654Semi-LightItalic';
+    font-family: '654Semi-LightItalic';
   }
   .PSBasic1200-754Semi-LightItalic {
-    font-family: 'PSBasic1200-754Semi-LightItalic';
+    font-family: '754Semi-LightItalic';
   }
   .PSBasic1200-660Regular {
-    font-family: 'PSBasic1200-660Regular';
+    font-family: '660Regular';
   }
   .PSBasic1200-760Regular {
-    font-family: 'PSBasic1200-760Regular';
+    font-family: '760Regular';
   }
   .PSBasic1200-664RegularItalic {
-    font-family: 'PSBasic1200-664RegularItalic';
+    font-family: '664RegularItalic';
   }
   .PSBasic1200-764RegularItalic {
-    font-family: 'PSBasic1200-764RegularItalic';
+    font-family: '764RegularItalic';
   }
   .PSBasic1200-670Medium {
-    font-family: 'PSBasic1200-670Medium';
+    font-family: '670Medium';
   }
   .PSBasic1200-770Medium {
-    font-family: 'PSBasic1200-770Medium';
+    font-family: '770Medium';
   }
   .PSBasic1200-674MediumItalic {
-    font-family: 'PSBasic1200-674MediumItalic';
+    font-family: '674MediumItalic';
   }
   .PSBasic1200-774MediumItalic {
-    font-family: 'PSBasic1200-774MediumItalic';
+    font-family: '774MediumItalic';
   }
   .PSBasic1200-680Semi-Bold {
-    font-family: 'PSBasic1200-680Semi-Bold';
+    font-family: '680Semi-Bold';
   }
   .PSBasic1200-780Semi-Bold {
-    font-family: 'PSBasic1200-780Semi-Bold';
+    font-family: '780Semi-Bold';
   }
   .PSBasic1200-684Semi-BoldItalic {
-    font-family: 'PSBasic1200-684Semi-BoldItalic';
+    font-family: '684Semi-BoldItalic';
   }
   .PSBasic1200-784Semi-BoldItalic {
-    font-family: 'PSBasic1200-784Semi-BoldItalic';
+    font-family: '784Semi-BoldItalic';
   }
   .PSBasic1200-690Bold {
-    font-family: 'PSBasic1200-690Bold';
+    font-family: '690Bold';
   }
   .PSBasic1200-790Bold {
-    font-family: 'PSBasic1200-790Bold';
+    font-family: '790Bold';
   }
   .PSBasic1200-694BoldItalic {
-    font-family: 'PSBasic1200-694BoldItalic';
+    font-family: '694BoldItalic';
   }
   .PSBasic1200-694BoldItalic {
-    font-family: 'PSBasic1200-794BoldItalic';
+    font-family: '794BoldItalic';
   }
 }
