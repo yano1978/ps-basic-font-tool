@@ -331,6 +331,7 @@ const App = () => {
         className="text-white flex-1 overflow-y-scroll"
       >
         <textarea
+          spellCheck="false"
           className={`max-w-[300px] min-h-full sm:max-w-full px-4 ${weight}`}
           style={{
             fontSize: size + 'px',
