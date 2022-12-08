@@ -2,7 +2,7 @@ import { useState } from 'react';
 import FontLink from '@/components/FontLink';
 
 const DropdownMenu = ({ className = '', toggleWeight }) => {
-  const [active, setActive] = useState(null);
+  const [active, setActive] = useState(41);
   const setLinkActive = (id) => {
     setActive(id);
   };
@@ -20,7 +20,6 @@ const DropdownMenu = ({ className = '', toggleWeight }) => {
       id: 2,
       fontTitle: '444, light italic',
       fontClass: '',
-      fontClicked: false,
     },
     {
       id: 3,
@@ -83,7 +82,6 @@ const DropdownMenu = ({ className = '', toggleWeight }) => {
       id: 14,
       fontTitle: '544, light italic',
       fontClass: '',
-      fontClicked: false,
     },
     {
       id: 15,
@@ -139,124 +137,172 @@ const DropdownMenu = ({ className = '', toggleWeight }) => {
   const [normalFonts] = useState([
     {
       id: 25,
-      fontTitle: '640, light',
+      fontFull: '640 - light',
+      fontNumber: '640, ',
+      fontTitle: 'light',
       fontClass: 'PSBasic1200-640Light',
     },
     {
       id: 26,
-      fontTitle: '644, light italic',
+      fontFull: '644 - light italic',
+      fontNumber: '644, ',
+      fontTitle: 'light italic',
       fontClass: 'PSBasic1200-644LightItalic',
     },
     {
       id: 27,
-      fontTitle: '650, semi-light',
+      fontFull: '650 - semi-light',
+      fontNumber: '650, ',
+      fontTitle: 'semi-light',
       fontClass: 'PSBasic1200-650Semi-Light',
     },
     {
       id: 28,
-      fontTitle: '654, semi-light italic',
+      fontFull: '654 - semi-light italic',
+      fontNumber: '654, ',
+      fontTitle: 'semi-light italic',
       fontClass: 'PSBasic1200-654Semi-LightItalic',
     },
     {
       id: 29,
-      fontTitle: '660, regular',
+      fontFull: '660 - regular',
+      fontNumber: '660, ',
+      fontTitle: 'regular',
       fontClass: 'PSBasic1200-660Regular',
     },
     {
       id: 30,
-      fontTitle: '664, regular italic',
+      fontFull: '664 - regular italic',
+      fontNumber: '664, ',
+      fontTitle: 'regular italic',
       fontClass: 'PSBasic1200-664RegularItalic',
     },
     {
       id: 31,
-      fontTitle: '670, medium',
+      fontFull: '670 - medium',
+      fontNumber: '670, ',
+      fontTitle: 'medium',
       fontClass: 'PSBasic1200-670Medium',
     },
     {
       id: 32,
-      fontTitle: '674, medium italic',
+      fontFull: '674 - medium italic',
+      fontNumber: '674, ',
+      fontTitle: 'medium italic',
       fontClass: 'PSBasic1200-674MediumItalic',
     },
     {
       id: 33,
-      fontTitle: '680, semi-bold',
+      fontFull: '680 - semi-bold',
+      fontNumber: '680, ',
+      fontTitle: 'semi-bold',
       fontClass: 'PSBasic1200-680Semi-Bold',
     },
     {
       id: 34,
-      fontTitle: '684, semi-bold italic',
+      fontFull: '684 - semi-bold italic',
+      fontNumber: '684, ',
+      fontTitle: 'semi-bold italic',
       fontClass: 'PSBasic1200-684Semi-BoldItalic',
     },
     {
       id: 35,
-      fontTitle: '690, bold',
+      fontFull: '690 - bold',
+      fontNumber: '690, ',
+      fontTitle: 'bold',
       fontClass: 'PSBasic1200-690Bold',
     },
     {
       id: 36,
-      fontTitle: '694, bold italic',
+      fontFull: '694 - bold italic',
+      fontNumber: '694, ',
+      fontTitle: 'bold italic',
       fontClass: 'PSBasic1200-694BoldItalic',
     },
   ]);
   const [extendedFonts] = useState([
     {
       id: 37,
-      fontTitle: '740, light',
+      fontFull: '740 - light',
+      fontNumber: '740, ',
+      fontTitle: 'light',
       fontClass: 'PSBasic1200-740Light',
     },
     {
       id: 38,
-      fontTitle: '744, light italic',
+      fontFull: '744 - light italic',
+      fontNumber: '744, ',
+      fontTitle: 'light italic',
       fontClass: 'PSBasic1200-744LightItalic',
     },
     {
       id: 39,
-      fontTitle: '750, semi-light',
+      fontFull: '750 - semi-light',
+      fontNumber: '750, ',
+      fontTitle: 'semi-light',
       fontClass: 'PSBasic1200-750Semi-Light',
     },
     {
       id: 40,
-      fontTitle: '754, semi-light italic',
+      fontFull: '754 - semi-light italic',
+      fontNumber: '754, ',
+      fontTitle: 'semi-light italic',
       fontClass: 'PSBasic1200-754Semi-LightItalic',
     },
     {
       id: 41,
-      fontTitle: '760, regular',
+      fontFull: '760 - regular',
+      fontNumber: '760, ',
+      fontTitle: 'regular',
       fontClass: 'PSBasic1200-760Regular',
     },
     {
       id: 42,
-      fontTitle: '764, regular italic',
+      fontFull: '764 - regular italic',
+      fontNumber: '764, ',
+      fontTitle: 'regular italic',
       fontClass: 'PSBasic1200-764RegularItalic',
     },
     {
       id: 43,
-      fontTitle: '770, medium',
+      fontFull: '770 - medium',
+      fontNumber: '770, ',
+      fontTitle: 'medium',
       fontClass: 'PSBasic1200-770Medium',
     },
     {
       id: 44,
-      fontTitle: '774, medium italic',
+      fontFull: '774 - medium italic',
+      fontNumber: '774, ',
+      fontTitle: 'medium italic',
       fontClass: 'PSBasic1200-774MediumItalic',
     },
     {
       id: 45,
-      fontTitle: '780, semi-bold',
+      fontFull: '780 - semi-bold',
+      fontNumber: '780, ',
+      fontTitle: 'semi-bold',
       fontClass: 'PSBasic1200-780Semi-Bold',
     },
     {
       id: 46,
-      fontTitle: '784, semi-bold italic',
+      fontFull: '784 - semi-bold italic',
+      fontNumber: '784, ',
+      fontTitle: 'semi-bold italic',
       fontClass: 'PSBasic1200-784Semi-BoldItalic',
     },
     {
       id: 47,
-      fontTitle: '790, bold',
+      fontFull: '790 - bold',
+      fontNumber: '790, ',
+      fontTitle: 'bold',
       fontClass: 'PSBasic1200-790Bold',
     },
     {
       id: 48,
-      fontTitle: '794, bold italic',
+      fontFull: '794 - bold italic',
+      fontNumber: '794, ',
+      fontTitle: 'bold italic',
       fontClass: 'PSBasic1200-794BoldItalic',
     },
   ]);
@@ -375,7 +421,7 @@ const DropdownMenu = ({ className = '', toggleWeight }) => {
   return (
     <details className={className} open={isOpen} onClick={(e) => onToggle(e)}>
       <summary className="absolute left-28 top-1 tablet:top-[12.5px] cursor-pointer">
-        {!text ? '670 - medium' : text}
+        {!text ? '760 - regular' : text}
       </summary>
       <div className="font-menu">
         <div className="col pointer-events-none text-[#6C6C6C]">
@@ -432,7 +478,7 @@ const DropdownMenu = ({ className = '', toggleWeight }) => {
                   <li
                     onClick={(e) => {
                       toggleWeight(item.fontClass);
-                      changeValueAndCloseMenu({ text: item.fontTitle });
+                      changeValueAndCloseMenu({ text: item.fontFull });
                       onToggle(e);
                     }}
                     key={item.id}
@@ -460,7 +506,7 @@ const DropdownMenu = ({ className = '', toggleWeight }) => {
                   <li
                     onClick={(e) => {
                       toggleWeight(item.fontClass);
-                      changeValueAndCloseMenu({ text: item.fontTitle });
+                      changeValueAndCloseMenu({ text: item.fontFull });
                       onToggle(e);
                     }}
                     key={item.id}

@@ -1,8 +1,11 @@
-const FontLink = ({ setLinkActive, id, fontTitle, isActive }) => {
+const FontLink = ({ setLinkActive, id, fontTitle, fontNumber, isActive }) => {
   return (
-    <a href="#" onClick={() => setLinkActive(id)} className={isActive ? 'active' : ''}>
-      {fontTitle}
-    </a>
+    <>
+      {fontNumber}
+      <a href="#" onClick={() => setLinkActive(id)} className={isActive ? 'active' : ''}>
+        {fontTitle}
+      </a>
+    </>
   );
 };
 

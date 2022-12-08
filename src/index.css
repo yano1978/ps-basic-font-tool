@@ -343,6 +343,7 @@ body {
   }
   /* Input textarea native override */
   textarea {
+    font-family: '760Regular';
     background: transparent;
     border: none;
     overflow: auto;
@@ -409,7 +410,6 @@ body {
       -o-transform: rotate(270deg);
     }
     .font-menu {
-      font-family: '760Regular';
       z-index: 2;
       min-height: 750px;
       display: flex;
@@ -431,7 +431,7 @@ body {
 
   /* Font active */
   .active {
-    border-bottom: 2px solid #fff;
+    border-bottom: 1px solid #fff;
   }
 
   /* Details animation */
