@@ -10,6 +10,12 @@ module.exports = {
       xl: '1280px',
       '2xl': '1536px',
     },
+    colors: {
+      red: '#E24523',
+      white: '#fff',
+      grey: '#4B4E54',
+      black: '#000',
+    },
     extend: {},
   },
   plugins: [],
