@@ -207,6 +207,7 @@ html {
 
 body {
   background-color: #000;
+  font-size: 17px;
   /* Input range native override */
   input[type='range'] {
     background: transparent;

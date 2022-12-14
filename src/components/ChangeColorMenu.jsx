@@ -91,7 +91,7 @@ const ChangeColorMenu = ({ handleBgColor, changeBgColor, dropDownCircle }) => {
         </div>
       </button>
       <div
-        className={`transition-all duration-200 z-10 absolute top-7 flex flex-col ${
+        className={`transition-all duration-200 z-10 absolute top-7 right-7 flex flex-col ${
           isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
       >

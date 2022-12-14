@@ -11,7 +11,7 @@ const InfoDetailsMenu = ({ injectDetailsText, injectCopyright, injectContact }) 
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          className={`${rotateIcon ? 'rotate-45' : ''} transition-all duration-200 w-8 h-8 mt-1`}
+          className={`${rotateIcon ? 'rotate-45' : ''} transition-all duration-200 w-7 h-7 mt-1`}
         >
           <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
         </svg>
