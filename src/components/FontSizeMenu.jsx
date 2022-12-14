@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import FontLink from '@/components/FontLink';
 
-const DropdownMenu = ({ className = '', toggleWeight }) => {
+const FontSizeMenu = ({ className = '', toggleWeight }) => {
   const [active, setActive] = useState(41);
   const setLinkActive = (id) => {
     setActive(id);
@@ -601,4 +601,4 @@ const DropdownMenu = ({ className = '', toggleWeight }) => {
   );
 };
 
-export default DropdownMenu;
+export default FontSizeMenu;
