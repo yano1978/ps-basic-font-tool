@@ -1,12 +1,19 @@
 import { useState } from 'react';
 import FontSizeMenu from '@/components/FontSizeMenu';
 import ChangeColorMenu from './components/ChangeColorMenu';
+import InfoDetailsMenu from '@/components/InfoDetailsMenu';
 
 const App = () => {
   let [changeBgColor, setChangeColor] = useState('#000');
   let [changeTextColor, setChangeTextColor] = useState('#fff');
   let [changeDeepColor, setDropdownColor] = useState('');
   let [dropDownCircle, setDropDownCircle] = useState('white');
+  const [textValue, setTextValue] = useState('Type here...');
+  const [size, setSize] = useState(230);
+  const [spacing, setLetterSpacing] = useState(-18);
+  const [leading, setLineHeight] = useState(200);
+  let [weight, setWeight] = useState('');
+
   const handleBgColor = (value) => {
     changeBgColor = value.bg;
     changeTextColor = value.text;
@@ -62,10 +69,23 @@ const App = () => {
     setDropdownColor(changeDeepColor);
     setDropDownCircle(dropDownCircle);
   };
-  const [size, setSize] = useState(230);
-  const [spacing, setLetterSpacing] = useState(-18);
-  const [leading, setLineHeight] = useState(200);
-  let [weight, setWeight] = useState('');
+
+  const injectDetailsText = () => {
+    let newValue = `PS Basic: a structural type system drawn on a rigid grid of twelve hundred square units, divided into twenty three vertical paths (12 columns and 11 intervals). Consisting of  60 styles, 5 widths and 6 weights, from light to bold, narrow to wide, including italics. Also containing alternative character sets.
+    Its name is derived from its meaning, the concept is an experiment to align two subtly opposing modernist teachings in Switzerland  circa 1957, one in Basel, the other in Zurich. When the release of both Helvetica and Univers occurred, modernist values and education was at its height. In Basil, Emil Ruder, teacher at Allgemeine Gewerbeschule Basel often proclaimed Univers to be the superior (and only necessary) font, designed by Adrian Frutiger. 
+    However, many modernist graphic designers in Zurich at the time opted to use Helvetica, such as Josef Muller Brockmann. Hence the name ‘Bas’ from ‘Basel’, and ‘ic’ from’Zurich’, the name ‘Basic’ contains ethos and mantras of both similar, yet subtly different views. Old style characters such as the lowercase ‘g’, the tail on the lowercase ‘l’ etc give reference to the pre-and-post war era, while appearing classical yet enhancing readability through their differentiation.
+    The design of this font is aimed at combining elements of both fonts, systematically created as a homage to both. Subtle details in the vector paths, all characters drawn individually (no interpolation). The incremental increase in width variants reference the golden ratio. The detail also includes precise three units ink traps, giving the font a constructed, industrial appearance.`;
+    setTextValue(newValue);
+  };
+
+  const injectCopyright = () => {
+    let newValue = 'Copyright';
+    setTextValue(newValue);
+  };
+  const injectContact = () => {
+    let newValue = 'Contact';
+    setTextValue(newValue);
+  };
 
   const toggleWeight = (value) => {
     weight = value;
@@ -174,11 +194,18 @@ const App = () => {
               </li>
             </ul>
           </div>
-          <ChangeColorMenu
-            handleBgColor={handleBgColor}
-            changeBgColor={changeBgColor}
-            dropDownCircle={dropDownCircle}
-          />
+          <div className="flex absolute right-5 tablet:right-0 tablet:relative">
+            <ChangeColorMenu
+              handleBgColor={handleBgColor}
+              changeBgColor={changeBgColor}
+              dropDownCircle={dropDownCircle}
+            />
+            <InfoDetailsMenu
+              injectDetailsText={injectDetailsText}
+              injectCopyright={injectCopyright}
+              injectContact={injectContact}
+            />
+          </div>
         </div>
       </nav>
       <main
@@ -200,8 +227,9 @@ const App = () => {
           id="description"
           cols="30"
           rows="10"
-          defaultValue="Type here..."
           placeholder="Type here..."
+          value={textValue}
+          onChange={({ target }) => setTextValue(target.textValue)}
         ></textarea>
       </main>
     </div>

@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from 'react';
-import InfoDetailsMenu from '@/components/InfoDetailsMenu';
 
 const ChangeColorMenu = ({ handleBgColor, changeBgColor, dropDownCircle }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -84,7 +83,7 @@ const ChangeColorMenu = ({ handleBgColor, changeBgColor, dropDownCircle }) => {
   ]);
 
   return (
-    <div className="flex absolute right-5 tablet:right-0 tablet:relative">
+    <>
       <button ref={btnRef} onClick={() => setIsOpen((prev) => !prev)}>
         <div className="w-4 h-4 border border-1 rounded-full mr-3.5 mt-1 relative overflow-hidden">
           <div className={`bg-[${changeBgColor}] absolute right-0 w-1/2 h-full`}></div>
@@ -113,8 +112,7 @@ const ChangeColorMenu = ({ handleBgColor, changeBgColor, dropDownCircle }) => {
           </button>
         ))}
       </div>
-      <InfoDetailsMenu />
-    </div>
+    </>
   );
 };
 
