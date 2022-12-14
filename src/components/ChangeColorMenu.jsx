@@ -5,6 +5,72 @@ const ChangeColorMenu = ({ handleBgColor, changeBgColor, dropDownCircle }) => {
   const handleMenuShowing = () => {
     setShowColors(!show);
   };
+  const [buttons] = useState([
+    {
+      id: 1,
+      bg: '#E24523',
+      text: '#000',
+      border: 'border-black',
+      bgName: 'bg-red',
+      textName: 'bg-black',
+    },
+    {
+      id: 2,
+      bg: '#fff',
+      text: '#000',
+      border: 'border-black',
+      bgName: 'bg-black',
+      textName: 'bg-white',
+    },
+    {
+      id: 3,
+      bg: '#000',
+      text: '#fff',
+      border: 'border-white',
+      bgName: 'bg-white',
+      textName: 'bg-black',
+    },
+    {
+      id: 4,
+      bg: '#4B4E54',
+      text: '#000',
+      border: 'border-black',
+      bgName: 'bg-grey',
+      textName: 'bg-black',
+    },
+    {
+      id: 5,
+      bg: '#E24523',
+      text: '#fff',
+      border: 'border-white',
+      bgName: 'bg-red',
+      textName: 'bg-white',
+    },
+    {
+      id: 6,
+      bg: '#fff',
+      text: '#E24523',
+      border: 'border-red',
+      bgName: 'bg-white',
+      textName: 'bg-red',
+    },
+    {
+      id: 7,
+      bg: '#000',
+      text: '#E24523',
+      border: 'border-red',
+      bgName: 'bg-black',
+      textName: 'bg-red',
+    },
+    {
+      id: 8,
+      bg: '#4B4E54',
+      text: '#fff',
+      border: 'border-white',
+      bgName: 'bg-grey',
+      textName: 'bg-white',
+    },
+  ]);
 
   return (
     <div className="flex absolute right-5 tablet:right-0 tablet:relative">
@@ -19,103 +85,22 @@ const ChangeColorMenu = ({ handleBgColor, changeBgColor, dropDownCircle }) => {
           show ? 'opacity-100' : 'opacity-0'
         }`}
       >
-        <button
-          onClick={() => {
-            handleMenuShowing();
-            handleBgColor({ bg: '#E24523', text: '#000' });
-          }}
-        >
-          <div className="w-4 h-4 border border-1 border-black rounded-full mr-3.5 mt-1 relative overflow-hidden">
-            <div className="bg-red absolute right-0 w-1/2 h-full"></div>
-            <div className="bg-black absolute w-1/2 h-full"></div>
-          </div>
-        </button>
-        <button
-          onClick={() => {
-            handleMenuShowing();
-            handleBgColor({ bg: '#fff', text: '#000' });
-          }}
-          className="pt-1"
-        >
-          <div className="w-4 h-4 border border-1 border-black rounded-full mr-3.5 mt-1 relative overflow-hidden">
-            <div className="bg-black absolute w-1/2 h-full"></div>
-            <div className="bg-white absolute right-0 w-1/2 h-full"></div>
-          </div>
-        </button>
-        <button
-          onClick={() => {
-            handleMenuShowing();
-            handleBgColor({ bg: '#000', text: '#fff' });
-          }}
-          className="pt-1"
-        >
-          <div
-            className={`w-4 h-4 border border-1 border-white rounded-full mr-3.5 mt-1 relative overflow-hidden`}
+        {buttons.map((item) => (
+          <button
+            onClick={() => {
+              handleMenuShowing();
+              handleBgColor({ bg: item.bg, text: item.text });
+            }}
+            key={item.id}
           >
-            <div className="bg-black absolute right-0 w-1/2 h-full"></div>
-            <div className="bg-white absolute w-1/2 h-full"></div>
-          </div>
-        </button>
-        <button
-          onClick={() => {
-            handleMenuShowing();
-            handleBgColor({ bg: '#4B4E54', text: '#000' });
-          }}
-          className="pt-1"
-        >
-          <div className="w-4 h-4 border border-1 border-black rounded-full mr-3.5 mt-1 relative overflow-hidden">
-            <div className="bg-black absolute w-1/2 h-full"></div>
-            <div className="bg-grey absolute right-0 w-1/2 h-full"></div>
-          </div>
-        </button>
-        <button
-          onClick={() => {
-            handleMenuShowing();
-            handleBgColor({ bg: '#E24523', text: '#fff' });
-          }}
-          className="pt-1"
-        >
-          <div className="w-4 h-4 border border-1 border-white rounded-full mr-3.5 mt-1 relative overflow-hidden">
-            <div className="bg-white absolute w-1/2 h-full"></div>
-            <div className="bg-red absolute right-0 w-1/2 h-full"></div>
-          </div>
-        </button>
-        <button
-          onClick={() => {
-            handleMenuShowing();
-            handleBgColor({ bg: '#fff', text: '#E24523' });
-          }}
-          className="pt-1"
-        >
-          <div className="w-4 h-4 border border-1 border-red rounded-full mr-3.5 mt-1 relative overflow-hidden">
-            <div className="bg-red absolute w-1/2 h-full"></div>
-            <div className="bg-white absolute right-0 w-1/2 h-full"></div>
-          </div>
-        </button>
-        <button
-          onClick={() => {
-            handleMenuShowing();
-            handleBgColor({ bg: '#000', text: '#E24523' });
-          }}
-          className="pt-1"
-        >
-          <div className="w-4 h-4 border border-1 border-red rounded-full mr-3.5 mt-1 relative overflow-hidden">
-            <div className="bg-red absolute w-1/2 h-full"></div>
-            <div className="bg-black absolute right-0 w-1/2 h-full"></div>
-          </div>
-        </button>
-        <button
-          onClick={() => {
-            handleMenuShowing();
-            handleBgColor({ bg: '#4B4E54', text: '#fff' });
-          }}
-          className="pt-1"
-        >
-          <div className="w-4 h-4 border border-1 border-white rounded-full mr-3.5 mt-1 relative overflow-hidden">
-            <div className="bg-white absolute w-1/2 h-full"></div>
-            <div className="bg-grey absolute right-0 w-1/2 h-full"></div>
-          </div>
-        </button>
+            <div
+              className={`w-4 h-4 border border-1 ${item.border} rounded-full mr-3.5 mt-2 relative overflow-hidden`}
+            >
+              <div className={`${item.bgName} absolute right-0 w-1/2 h-full`}></div>
+              <div className={`${item.textName} absolute w-1/2 h-full`}></div>
+            </div>
+          </button>
+        ))}
       </div>
       <a href="#">
         <svg

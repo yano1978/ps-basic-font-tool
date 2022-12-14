@@ -12,7 +12,7 @@ const App = () => {
     changeTextColor = value.text;
     setChangeColor(changeBgColor);
     setChangeTextColor(changeTextColor);
-    console.log('bg:', changeBgColor, 'text:', changeTextColor);
+    // console.log('bg:', changeBgColor, 'text:', changeTextColor);
     // Colors combination available
     if (changeBgColor === '#000') {
       // bg is black
