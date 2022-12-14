@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import InfoDetailsMenu from '@/components/InfoDetailsMenu';
 
 const ChangeColorMenu = ({ handleBgColor, changeBgColor, dropDownCircle }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -112,18 +113,7 @@ const ChangeColorMenu = ({ handleBgColor, changeBgColor, dropDownCircle }) => {
           </button>
         ))}
       </div>
-      <a href="#">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth="1.5"
-          stroke="currentColor"
-          className="w-7 h-7 mt-1"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
-        </svg>
-      </a>
+      <InfoDetailsMenu />
     </div>
   );
 };
