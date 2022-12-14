@@ -1,10 +1,20 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const ChangeColorMenu = ({ handleBgColor, changeBgColor, dropDownCircle }) => {
-  const [show, setShowColors] = useState(false);
-  const handleMenuShowing = () => {
-    setShowColors(!show);
-  };
+  const [isOpen, setIsOpen] = useState(false);
+  const btnRef = useRef();
+
+  useEffect(() => {
+    const closeDropDown = (e) => {
+      if (e.path[2] !== btnRef.current) {
+        setIsOpen(false);
+      }
+    };
+
+    document.body.addEventListener('click', closeDropDown);
+    return () => document.body.removeEventListener('click', closeDropDown);
+  }, []);
+
   const [buttons] = useState([
     {
       id: 1,
@@ -74,7 +84,7 @@ const ChangeColorMenu = ({ handleBgColor, changeBgColor, dropDownCircle }) => {
 
   return (
     <div className="flex absolute right-5 tablet:right-0 tablet:relative">
-      <button onClick={handleMenuShowing}>
+      <button ref={btnRef} onClick={() => setIsOpen((prev) => !prev)}>
         <div className="w-4 h-4 border border-1 rounded-full mr-3.5 mt-1 relative overflow-hidden">
           <div className={`bg-[${changeBgColor}] absolute right-0 w-1/2 h-full`}></div>
           <div className={`bg-${dropDownCircle} absolute w-1/2 h-full`}></div>
@@ -82,13 +92,13 @@ const ChangeColorMenu = ({ handleBgColor, changeBgColor, dropDownCircle }) => {
       </button>
       <div
         className={`transition-all duration-200 z-10 absolute top-7 flex flex-col ${
-          show ? 'opacity-100' : 'opacity-0'
+          isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
       >
         {buttons.map((item) => (
           <button
             onClick={() => {
-              handleMenuShowing();
+              setIsOpen((prev) => !prev);
               handleBgColor({ bg: item.bg, text: item.text });
             }}
             key={item.id}
