@@ -424,7 +424,7 @@ const FontSizeMenu = ({ className = '', toggleWeight }) => {
         {!text ? '760 - regular' : text}
       </summary>
       <div className="font-menu">
-        <div className="col pointer-events-none text-[#6C6C6C]">
+        <div className="col pointer-events-none not-available">
           <div className="flex flex-row relative">
             <div className="w-1/4 absolute top-0.5">
               <div>Narrow</div>
@@ -445,7 +445,7 @@ const FontSizeMenu = ({ className = '', toggleWeight }) => {
             </div>
           </div>
         </div>
-        <div className="col pointer-events-none text-[#6C6C6C]">
+        <div className="col pointer-events-none not-available">
           <div className="grid grid-cols-3 gap-20">
             <div>
               <div>Compact</div>
@@ -522,7 +522,7 @@ const FontSizeMenu = ({ className = '', toggleWeight }) => {
             </div>
           </div>
         </div>
-        <div className="col pointer-events-none text-[#6C6C6C]">
+        <div className="col pointer-events-none not-available">
           <div className="grid grid-cols-3 gap-20">
             <div>
               <div>Wide</div>
@@ -551,7 +551,7 @@ const FontSizeMenu = ({ className = '', toggleWeight }) => {
           </div>
         </div>
         <div className="col">
-          <div className="grid grid-cols-3 gap-20 pointer-events-none text-[#6C6C6C]">
+          <div className="grid grid-cols-3 gap-20 pointer-events-none not-available">
             <div>
               <div>Mono</div>
               <div>900</div>

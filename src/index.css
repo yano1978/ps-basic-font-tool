@@ -426,6 +426,9 @@ body {
       color: #fff;
       .col {
         width: 33.3333%;
+        &.not-available {
+          color: #6c6c6c;
+        }
       }
     }
   }
@@ -461,8 +464,13 @@ body {
       input[type='checkbox']:checked + label:before {
         background-color: #000;
       }
-      .col ul > li > a.active {
-        border-bottom: 2px solid #000;
+      .col {
+        ul > li > a.active {
+          border-bottom: 2px solid #000;
+        }
+        &.not-available {
+          color: #c4c4c4 !important;
+        }
       }
     }
   }
@@ -518,6 +526,11 @@ body {
       }
       input[type='checkbox']:checked + label:before {
         background-color: #fff;
+      }
+      .col {
+        &.not-available {
+          color: #c4c4c4 !important;
+        }
       }
     }
   }
