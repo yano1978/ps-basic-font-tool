@@ -6,7 +6,7 @@ const ChangeColorMenu = ({ handleBgColor, changeBgColor, dropDownCircle }) => {
 
   useEffect(() => {
     const closeDropDown = (e) => {
-      if (e.path[2] !== btnRef.current) {
+      if (!btnRef.current.contains(e.target)) {
         setIsOpen(false);
       }
     };
