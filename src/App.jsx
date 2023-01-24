@@ -5,10 +5,10 @@ import InfoDetailsMenu from '@/components/InfoDetailsMenu';
 import LoopText from './components/LoopText';
 
 const App = () => {
-  let [changeBgColor, setChangeColor] = useState('#000');
-  let [changeTextColor, setChangeTextColor] = useState('#fff');
+  let [changeBgColor, setChangeColor] = useState('#E24523');
+  let [changeTextColor, setChangeTextColor] = useState('#000');
   let [changeDeepColor, setDropdownColor] = useState('');
-  let [dropDownCircle, setDropDownCircle] = useState('white');
+  let [dropDownCircle, setDropDownCircle] = useState('black');
   const [textValue, setTextValue] = useState('Type here...');
   const [size, setSize] = useState(230);
   const [spacing, setLetterSpacing] = useState(-18);
@@ -39,7 +39,7 @@ const App = () => {
     changeTextColor = value.text;
     setChangeColor(changeBgColor);
     setChangeTextColor(changeTextColor);
-    console.log('bg:', changeBgColor, 'text:', changeTextColor);
+    // console.log('bg:', changeBgColor, 'text:', changeTextColor);
     // Colors combination available
     if (changeBgColor === '#000') {
       // bg is black

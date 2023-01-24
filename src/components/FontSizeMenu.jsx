@@ -550,13 +550,13 @@ const FontSizeMenu = ({ className = '', toggleWeight }) => {
             </div>
           </div>
         </div>
-        <div className="col">
-          <div className="grid grid-cols-3 gap-20 pointer-events-none not-available">
-            <div>
+        <div className="col ">
+          <div className="grid grid-cols-3 gap-20 ">
+            <div className="pointer-events-none not-available">
               <div>Mono</div>
               <div>900</div>
             </div>
-            <div className="col-span-2">
+            <div className="col-span-2 pointer-events-none not-available">
               <ul className="mt-1">
                 {monoFonts.map((item) => (
                   <li
