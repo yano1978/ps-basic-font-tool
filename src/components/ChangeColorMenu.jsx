@@ -22,23 +22,23 @@ const ChangeColorMenu = ({ handleBgColor, changeBgColor, dropDownCircle }) => {
       text: '#000',
       border: 'border-black',
       bgName: 'bg-red',
-      textName: 'bg-black',
+      textName: 'text-black',
     },
     {
       id: 2,
-      bg: '#fff',
-      text: '#000',
-      border: 'border-black',
-      bgName: 'bg-black',
-      textName: 'bg-white',
-    },
-    {
-      id: 3,
       bg: '#000',
       text: '#fff',
       border: 'border-white',
       bgName: 'bg-white',
-      textName: 'bg-black',
+      textName: 'text-black',
+    },
+    {
+      id: 3,
+      bg: '#fff',
+      text: '#000',
+      border: 'border-black',
+      bgName: 'bg-black',
+      textName: 'text-white',
     },
     {
       id: 4,
@@ -46,7 +46,7 @@ const ChangeColorMenu = ({ handleBgColor, changeBgColor, dropDownCircle }) => {
       text: '#000',
       border: 'border-black',
       bgName: 'bg-grey',
-      textName: 'bg-black',
+      textName: 'text-black',
     },
     {
       id: 5,
@@ -54,7 +54,7 @@ const ChangeColorMenu = ({ handleBgColor, changeBgColor, dropDownCircle }) => {
       text: '#fff',
       border: 'border-white',
       bgName: 'bg-red',
-      textName: 'bg-white',
+      textName: 'text-white',
     },
     {
       id: 6,
@@ -62,7 +62,7 @@ const ChangeColorMenu = ({ handleBgColor, changeBgColor, dropDownCircle }) => {
       text: '#E24523',
       border: 'border-red',
       bgName: 'bg-white',
-      textName: 'bg-red',
+      textName: 'text-red',
     },
     {
       id: 7,
@@ -70,7 +70,7 @@ const ChangeColorMenu = ({ handleBgColor, changeBgColor, dropDownCircle }) => {
       text: '#E24523',
       border: 'border-red',
       bgName: 'bg-black',
-      textName: 'bg-red',
+      textName: 'text-red',
     },
     {
       id: 8,
@@ -78,7 +78,7 @@ const ChangeColorMenu = ({ handleBgColor, changeBgColor, dropDownCircle }) => {
       text: '#fff',
       border: 'border-white',
       bgName: 'bg-grey',
-      textName: 'bg-white',
+      textName: 'text-white',
     },
   ]);
 
@@ -91,24 +91,20 @@ const ChangeColorMenu = ({ handleBgColor, changeBgColor, dropDownCircle }) => {
         </div>
       </button>
       <div
-        className={`transition-all duration-200 z-10 absolute top-7 right-7 flex flex-col ${
+        className={`transition-all duration-200 z-10 absolute top-[36px] right-[34px] flex flex-col border-[1px] [&_button]:border-b-2 ${
           isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
       >
         {buttons.map((item) => (
           <button
+            className="w-[30px] last:border-b-0"
             onClick={() => {
               setIsOpen((prev) => !prev);
               handleBgColor({ bg: item.bg, text: item.text });
             }}
             key={item.id}
           >
-            <div
-              className={`w-4 h-4 border border-1 ${item.border} rounded-full mr-3.5 mt-2 relative overflow-hidden`}
-            >
-              <div className={`${item.bgName} absolute right-0 w-1/2 h-full`}></div>
-              <div className={`${item.textName} absolute w-1/2 h-full`}></div>
-            </div>
+            <div className={`${item.bgName} ${item.textName}`}>A</div>
           </button>
         ))}
       </div>
