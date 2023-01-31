@@ -13,6 +13,7 @@ const App = () => {
   const [size, setSize] = useState(230);
   const [spacing, setLetterSpacing] = useState(-18);
   const [leading, setLineHeight] = useState(200);
+  const [fakeLeading, setFakeLineHeight] = useState(200);
   let [weight, setWeight] = useState('');
   let [counter, setCounter] = useState(0);
 
@@ -114,9 +115,11 @@ const App = () => {
     setWeight(weight);
   };
 
-  const fontsizeChange = (e) => {
+  const fontSizeChange = (e) => {
     // console.log('setting font size', e.target.value);
+
     setSize(parseInt(e.target.value));
+    setLineHeight(parseInt(e.target.value));
   };
 
   const letterSpacingChange = (e) => {
@@ -127,6 +130,7 @@ const App = () => {
   const lineHeightChange = (e) => {
     // console.log('setting line height', e.target.value);
     setLineHeight(parseInt(e.target.value));
+    setFakeLineHeight(parseInt(e.target.value));
   };
 
   return (
@@ -172,7 +176,7 @@ const App = () => {
                 </label>
                 <input
                   className={changeDeepColor}
-                  onChange={fontsizeChange}
+                  onChange={fontSizeChange}
                   type="range"
                   id="size"
                   name="size"
@@ -202,7 +206,7 @@ const App = () => {
                   htmlFor="leading"
                   className="flex w-full max-w-[110px] min-w-[120px] tablet:min-w-[120px]"
                 >
-                  Leading {leading + 'px'}
+                  Leading {fakeLeading + 'px'}
                 </label>
                 <input
                   className={changeDeepColor}
