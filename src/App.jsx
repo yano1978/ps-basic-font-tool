@@ -214,7 +214,7 @@ const App = () => {
                   type="range"
                   id="leading"
                   name="leading"
-                  min="-200"
+                  min="-120"
                   max="500"
                 />
               </li>
