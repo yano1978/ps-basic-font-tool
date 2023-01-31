@@ -26,16 +26,16 @@ const ChangeColorMenu = ({ handleBgColor, changeBgColor, dropDownCircle }) => {
     },
     {
       id: 2,
-      bg: '#000',
-      text: '#fff',
+      bg: '#fff',
+      text: '#000',
       border: 'border-white',
       bgName: 'bg-white',
       textName: 'text-black',
     },
     {
       id: 3,
-      bg: '#fff',
-      text: '#000',
+      bg: '#000',
+      text: '#fff',
       border: 'border-black',
       bgName: 'bg-black',
       textName: 'text-white',
@@ -91,7 +91,7 @@ const ChangeColorMenu = ({ handleBgColor, changeBgColor, dropDownCircle }) => {
         </div>
       </button>
       <div
-        className={`transition-all duration-200 z-10 absolute top-[36px] right-[34px] flex flex-col border-[1px] [&_button]:border-b-2 ${
+        className={`transition-all duration-200 z-10 absolute top-[36px] right-[34px] flex flex-col border-[1px] [&_button]:border-b-[1px] ${
           isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
       >
