@@ -206,7 +206,12 @@ html {
 }
 
 body {
-  font-size: 17px;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  .static-text {
+    font-family: '760Regular';
+  }
   /* Input range native override */
   input[type='range'] {
     background: transparent;
@@ -373,7 +378,7 @@ body {
         border-color: transparent transparent transparent #000;
         position: absolute;
         top: 0.5rem;
-        right: -1.25rem;
+        right: -1rem;
         transform: rotate(90deg);
         -webkit-transform: rotate(90deg);
         -moz-transform: rotate(90deg);

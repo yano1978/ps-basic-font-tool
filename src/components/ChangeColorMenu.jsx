@@ -85,13 +85,13 @@ const ChangeColorMenu = ({ handleBgColor, changeBgColor, dropDownCircle }) => {
   return (
     <>
       <button ref={btnRef} onClick={() => setIsOpen((prev) => !prev)}>
-        <div className="w-4 h-4 border border-1 rounded-full mr-3.5 mt-1 relative overflow-hidden">
+        <div className="w-3.5 h-3.5 border border-1 rounded-full mr-3.5 relative overflow-hidden">
           <div className={`bg-[${changeBgColor}] absolute right-0 w-1/2 h-full`}></div>
           <div className={`bg-${dropDownCircle} absolute w-1/2 h-full`}></div>
         </div>
       </button>
       <div
-        className={`transition-all duration-200 z-10 absolute top-[36px] right-[34px] flex flex-col border-[1px] [&_button]:border-b-[1px] ${
+        className={`transition-all duration-200 z-10 absolute top-7 right-7 flex flex-col border-[1px] [&_button]:border-b-[1px] ${
           isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
       >
