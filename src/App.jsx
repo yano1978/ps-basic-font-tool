@@ -41,13 +41,13 @@ studio
   let [changeDeepColor, setDropdownColor] = useState('');
   let [dropDownCircle, setDropDownCircle] = useState('black');
   const [textValue, setTextValue] = useState(defaulText);
-  const [size, setSize] = useState(230);
+  const [size, setSize] = useState(200);
   const [spacing, setLetterSpacing] = useState(-18);
   const [leading, setLineHeight] = useState(200);
   const [fakeLeading, setFakeLineHeight] = useState(200);
+  const [fakeKerning, setFakeLetterSpacing] = useState(200);
   let [weight, setWeight] = useState('');
   let [counter, setCounter] = useState(0);
-  // const [hidden, setHidden] = useState(false);
 
   const clickCounter = () => {
     setCounter(counter + 1);
@@ -168,14 +168,15 @@ The design of this font is aimed at combining elements of both fonts, systematic
 
   const fontSizeChange = (e) => {
     // console.log('setting font size', e.target.value);
-
     setSize(parseInt(e.target.value));
     setLineHeight(parseInt(e.target.value));
+    setLetterSpacing(parseInt(e.target.value) / 4);
   };
 
   const letterSpacingChange = (e) => {
     // console.log('setting letter spacing', e.target.value);
     setLetterSpacing(parseInt(e.target.value));
+    setFakeLetterSpacing(parseInt(e.target.value));
   };
 
   const lineHeightChange = (e) => {
@@ -191,7 +192,7 @@ The design of this font is aimed at combining elements of both fonts, systematic
           backgroundColor: changeBgColor,
           color: changeTextColor,
         }}
-        className="w-full py-1 sticky top-0 bg-black drop-shadow-md"
+        className="w-full py-1 sticky top-0 bg-black"
       >
         <div
           style={{
@@ -231,8 +232,8 @@ The design of this font is aimed at combining elements of both fonts, systematic
                   type="range"
                   id="size"
                   name="size"
-                  min="0"
-                  max="230"
+                  min="16"
+                  max="900"
                 />
               </li>
               <li className="flex ml-0 tablet:ml-7">
@@ -240,7 +241,7 @@ The design of this font is aimed at combining elements of both fonts, systematic
                   htmlFor="kern"
                   className="flex w-full max-w-[80px] min-w-[95px] tablet:min-w-[90px]"
                 >
-                  Kern {spacing + 'px'}
+                  Kern {fakeKerning + 'px'}
                 </label>
                 <input
                   className={changeDeepColor}
@@ -248,8 +249,8 @@ The design of this font is aimed at combining elements of both fonts, systematic
                   type="range"
                   id="kern"
                   name="kern"
-                  min="-18"
-                  max="100"
+                  min="-90"
+                  max="90"
                 />
               </li>
               <li className="flex ml-0 tablet:ml-7">
@@ -265,8 +266,8 @@ The design of this font is aimed at combining elements of both fonts, systematic
                   type="range"
                   id="leading"
                   name="leading"
-                  min="-120"
-                  max="500"
+                  min="-16"
+                  max="900"
                 />
               </li>
             </ul>
@@ -295,9 +296,6 @@ The design of this font is aimed at combining elements of both fonts, systematic
       >
         <textarea
           spellCheck="false"
-          // className={`max-w-[300px] min-h-full sm:max-w-full px-4 ${weight} ${
-          //   hidden ? 'block' : 'hidden'
-          // }`}
           className={`max-w-[300px] min-h-full sm:max-w-full px-4 ${weight}`}
           style={{
             fontSize: size + 'px',
@@ -312,15 +310,6 @@ The design of this font is aimed at combining elements of both fonts, systematic
           value={textValue}
           onChange={({ target }) => setTextValue(target.textValue)}
         ></textarea>
-
-        {/* <span
-          className={`absolute top-[50px] left-0 static-text max-w-[300px] min-h-full sm:max-w-full px-4 text-[230px] -tracking-[18px] leading-[200px] ${
-            hidden ? 'hidden' : 'block'
-          }`}
-          onClick={() => setHidden((hidden) => !hidden)}
-        >
-          {textValue}
-        </span> */}
       </main>
     </div>
   );
