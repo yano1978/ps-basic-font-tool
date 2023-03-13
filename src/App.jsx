@@ -45,7 +45,7 @@ studio
   const [spacing, setLetterSpacing] = useState(-18);
   const [leading, setLineHeight] = useState(200);
   const [fakeLeading, setFakeLineHeight] = useState(200);
-  const [fakeKerning, setFakeLetterSpacing] = useState(200);
+  const [fakeKerning, setFakeLetterSpacing] = useState(-18);
   let [weight, setWeight] = useState('');
   let [counter, setCounter] = useState(0);
 
@@ -228,11 +228,12 @@ The design of this font is aimed at combining elements of both fonts, systematic
                 </label>
                 <input
                   className={changeDeepColor}
+                  value={size}
                   onChange={fontSizeChange}
                   type="range"
                   id="size"
                   name="size"
-                  min="16"
+                  min="10"
                   max="900"
                 />
               </li>
@@ -241,10 +242,11 @@ The design of this font is aimed at combining elements of both fonts, systematic
                   htmlFor="kern"
                   className="flex w-full max-w-[80px] min-w-[95px] tablet:min-w-[90px]"
                 >
-                  Kern {fakeKerning + 'px'}
+                  Kern {Math.round(spacing) + 'px'}
                 </label>
                 <input
                   className={changeDeepColor}
+                  value={spacing}
                   onChange={letterSpacingChange}
                   type="range"
                   id="kern"
@@ -258,10 +260,11 @@ The design of this font is aimed at combining elements of both fonts, systematic
                   htmlFor="leading"
                   className="flex w-full max-w-[110px] min-w-[120px] tablet:min-w-[120px]"
                 >
-                  Leading {fakeLeading + 'px'}
+                  Leading {leading + 'px'}
                 </label>
                 <input
                   className={changeDeepColor}
+                  value={leading}
                   onChange={lineHeightChange}
                   type="range"
                   id="leading"
