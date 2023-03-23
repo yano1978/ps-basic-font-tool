@@ -174,11 +174,13 @@ The design of this font is aimed at combining elements of both fonts, systematic
     } else {
       let delta = e.target.value;
       if (delta >= size) {
-        console.log(leading++);
-        setLineHeight(leading++);
+        // console.log(leading++);
+        leading++;
+        setLineHeight(leading);
       } else {
-        console.log(leading--);
-        setLineHeight(parseInt(leading--));
+        // console.log(leading--);
+        leading--;
+        setLineHeight(parseInt(leading));
       }
     }
   };
