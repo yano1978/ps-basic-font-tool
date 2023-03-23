@@ -43,7 +43,7 @@ studio
   const [textValue, setTextValue] = useState(defaulText);
   const [size, setSize] = useState(200);
   const [spacing, setLetterSpacing] = useState(-18);
-  const [leading, setLineHeight] = useState(200);
+  let [leading, setLineHeight] = useState(200);
   const [fakeLeading, setFakeLineHeight] = useState(200);
   const [fakeKerning, setFakeLetterSpacing] = useState(-18);
   let [weight, setWeight] = useState('');
@@ -169,8 +169,18 @@ The design of this font is aimed at combining elements of both fonts, systematic
   const fontSizeChange = (e) => {
     // console.log('setting font size', e.target.value);
     setSize(parseInt(e.target.value));
-    setLineHeight(parseInt(e.target.value));
-    setLetterSpacing(parseInt(e.target.value) / 4);
+    if (size == leading) {
+      setLineHeight(parseInt(e.target.value));
+    } else {
+      let delta = e.target.value;
+      if (delta >= size) {
+        console.log(leading++);
+        setLineHeight(leading++);
+      } else {
+        console.log(leading--);
+        setLineHeight(parseInt(leading--));
+      }
+    }
   };
 
   const letterSpacingChange = (e) => {
@@ -233,7 +243,7 @@ The design of this font is aimed at combining elements of both fonts, systematic
                   type="range"
                   id="size"
                   name="size"
-                  min="10"
+                  min="16"
                   max="900"
                 />
               </li>
@@ -269,7 +279,7 @@ The design of this font is aimed at combining elements of both fonts, systematic
                   type="range"
                   id="leading"
                   name="leading"
-                  min="-16"
+                  min="16"
                   max="900"
                 />
               </li>
