@@ -43,7 +43,7 @@ studio
   const [textValue, setTextValue] = useState(defaulText);
   const [size, setSize] = useState(200);
   const [spacing, setLetterSpacing] = useState(-18);
-  let [leading, setLineHeight] = useState(200);
+  let [leading, setLineHeight] = useState(160);
   const [fakeLeading, setFakeLineHeight] = useState(200);
   const [fakeKerning, setFakeLetterSpacing] = useState(-18);
   let [weight, setWeight] = useState('');
@@ -169,19 +169,15 @@ The design of this font is aimed at combining elements of both fonts, systematic
   const fontSizeChange = (e) => {
     // console.log('setting font size', e.target.value);
     setSize(parseInt(e.target.value));
-    if (size == leading) {
-      setLineHeight(parseInt(e.target.value));
+    let delta = e.target.value;
+    if (delta >= size) {
+      // console.log(leading++);
+      leading++;
+      setLineHeight(leading);
     } else {
-      let delta = e.target.value;
-      if (delta >= size) {
-        // console.log(leading++);
-        leading++;
-        setLineHeight(leading);
-      } else {
-        // console.log(leading--);
-        leading--;
-        setLineHeight(parseInt(leading));
-      }
+      // console.log(leading--);
+      leading--;
+      setLineHeight(parseInt(leading));
     }
   };
 
