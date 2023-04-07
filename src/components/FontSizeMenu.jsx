@@ -406,6 +406,11 @@ const FontSizeMenu = ({ className = '', toggleWeight }) => {
   };
   const handleLigature = () => {
     setLigature(!ligature);
+    if (!ligature) {
+      document.querySelector('.textarea').classList.add('ligatures');
+    } else {
+      document.querySelector('.textarea').classList.remove('ligatures');
+    }
   };
 
   const changeValueAndCloseMenu = (value) => {
