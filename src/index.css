@@ -370,6 +370,60 @@ body {
       font-feature-settings: 'ss01';
     }
   }
+  .toggle {
+    background-color: #000;
+    &:after {
+      background-color: #e24523;
+    }
+    &.red-black {
+      background-color: #000;
+      &:after {
+        background-color: #e24523;
+      }
+    }
+    &.white-black {
+      background-color: #000;
+      &:after {
+        background-color: #fff;
+      }
+    }
+    &.black-white {
+      background-color: #fff;
+      &:after {
+        background-color: #000;
+      }
+    }
+    &.grey-black {
+      background-color: #000;
+      &:after {
+        background-color: #4b4e54;
+      }
+    }
+    &.red-white {
+      background-color: #fff;
+      &:after {
+        background-color: #e24523;
+      }
+    }
+    &.white-red {
+      background-color: #e24523;
+      &:after {
+        background-color: #fff;
+      }
+    }
+    &.black-red {
+      background-color: #e24523;
+      &:after {
+        background-color: #000;
+      }
+    }
+    &.grey-white {
+      background-color: #fff;
+      &:after {
+        background-color: #4b4e54;
+      }
+    }
+  }
   /* Details native override */
   details {
     summary {

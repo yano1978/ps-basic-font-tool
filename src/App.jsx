@@ -287,7 +287,7 @@ The design of this font is aimed at combining elements of both fonts, systematic
           </div>
           <div className="flex absolute right-5 tablet:right-0 tablet:relative">
             <LoopText clickCounter={clickCounter} />
-            <AlternativeToggle changeBgColor={changeBgColor} setAlternative={setAlternative} />
+            <AlternativeToggle className={changeDeepColor} setAlternative={setAlternative} />
             <ChangeColorMenu
               handleBgColor={handleBgColor}
               changeBgColor={changeBgColor}
