@@ -2,7 +2,7 @@ const LoopText = ({ clickCounter, className = '' }) => {
   return (
     <button className="loop mr-5" onClick={clickCounter}>
       <svg
-        className={`${className} w-3.5`}
+        className={`${className} w-[15px]`}
         viewBox="0 0 15 14"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

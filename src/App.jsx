@@ -184,13 +184,11 @@ The design of this font is aimed at combining elements of both fonts, systematic
   const letterSpacingChange = (e) => {
     // console.log('setting letter spacing', e.target.value);
     setLetterSpacing(parseInt(e.target.value));
-    setFakeLetterSpacing(parseInt(e.target.value));
   };
 
   const lineHeightChange = (e) => {
     // console.log('setting line height', e.target.value);
     setLineHeight(parseInt(e.target.value));
-    setFakeLineHeight(parseInt(e.target.value));
   };
 
   return (
