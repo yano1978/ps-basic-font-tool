@@ -45,8 +45,6 @@ studio
   const [size, setSize] = useState(200);
   const [spacing, setLetterSpacing] = useState(-18);
   let [leading, setLineHeight] = useState(160);
-  const [fakeLeading, setFakeLineHeight] = useState(200);
-  const [fakeKerning, setFakeLetterSpacing] = useState(-18);
   let [weight, setWeight] = useState('');
   let [counter, setCounter] = useState(0);
   const [enabled, setAlternative] = useState(false);
@@ -286,7 +284,7 @@ The design of this font is aimed at combining elements of both fonts, systematic
             </ul>
           </div>
           <div className="flex absolute right-5 tablet:right-0 tablet:relative">
-            <LoopText clickCounter={clickCounter} />
+            <LoopText className={changeDeepColor} clickCounter={clickCounter} />
             <AlternativeToggle className={changeDeepColor} setAlternative={setAlternative} />
             <ChangeColorMenu
               handleBgColor={handleBgColor}

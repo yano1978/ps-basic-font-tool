@@ -370,6 +370,7 @@ body {
       font-feature-settings: 'ss01';
     }
   }
+  /* Alternative toggle button colours */
   .toggle {
     background-color: #000;
     &:after {
@@ -421,6 +422,27 @@ body {
       background-color: #fff;
       &:after {
         background-color: #4b4e54;
+      }
+    }
+  }
+  /* Loop button colours */
+  .loop {
+    svg {
+      path {
+        fill: #000;
+      }
+      &.red-white,
+      &.black-white,
+      &.grey-white {
+        path {
+          fill: #fff;
+        }
+      }
+      &.white-red,
+      &.black-red {
+        path {
+          fill: #e24523;
+        }
       }
     }
   }
