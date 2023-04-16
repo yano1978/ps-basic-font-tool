@@ -7,8 +7,6 @@ const FontSizeMenu = ({ className = '', toggleWeight }) => {
     setActive(id);
   };
   let [isOpen, setIsOpen] = useState();
-  const [alternative, setAlternative] = useState(false);
-  const [ligature, setLigature] = useState(false);
   let [text, setText] = useState('');
   const [narrowFonts] = useState([
     {
@@ -401,18 +399,6 @@ const FontSizeMenu = ({ className = '', toggleWeight }) => {
     },
   ]);
 
-  const handleAnternative = () => {
-    setAlternative(!alternative);
-  };
-  const handleLigature = () => {
-    setLigature(!ligature);
-    if (!ligature) {
-      document.querySelector('.textarea').classList.add('ligatures');
-    } else {
-      document.querySelector('.textarea').classList.remove('ligatures');
-    }
-  };
-
   const changeValueAndCloseMenu = (value) => {
     text = value.text;
     setText(text);
@@ -580,24 +566,6 @@ const FontSizeMenu = ({ className = '', toggleWeight }) => {
                   </li>
                 ))}
               </ul>
-            </div>
-          </div>
-          <div className="grid grid-cols-3 gap-20 mt-5">
-            <div>Alternative</div>
-            <div>
-              <input type="checkbox" checked={alternative} onChange={handleAnternative} />
-              <label htmlFor="alternative">
-                <span className="ml-2.5">{!alternative ? <span>Off</span> : <span>On</span>}</span>
-              </label>
-            </div>
-          </div>
-          <div className="grid grid-cols-3 gap-20">
-            <div>Ligature</div>
-            <div>
-              <input type="checkbox" checked={ligature} onChange={handleLigature} />
-              <label htmlFor="ligature">
-                <span className="ml-2.5">{!ligature ? <span>Off</span> : <span>On</span>}</span>
-              </label>
             </div>
           </div>
         </div>

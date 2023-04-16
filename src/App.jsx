@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import FontSizeMenu from '@/components/FontSizeMenu';
-import ChangeColorMenu from './components/ChangeColorMenu';
+import ChangeColorMenu from '@/components/ChangeColorMenu';
 import InfoDetailsMenu from '@/components/InfoDetailsMenu';
-import LoopText from './components/LoopText';
+import LoopText from '@/components/LoopText';
+import AlternativeToggle from '@/components/AlternativeToggle';
 
 const App = () => {
   const defaulText = `Google, Nike, 
@@ -48,6 +49,7 @@ studio
   const [fakeKerning, setFakeLetterSpacing] = useState(-18);
   let [weight, setWeight] = useState('');
   let [counter, setCounter] = useState(0);
+  const [enabled, setAlternative] = useState(false);
 
   const clickCounter = () => {
     setCounter(counter + 1);
@@ -200,7 +202,7 @@ The design of this font is aimed at combining elements of both fonts, systematic
           backgroundColor: changeBgColor,
           color: changeTextColor,
         }}
-        className="w-full py-1 sticky top-0 bg-black"
+        className="w-full py-1 sticky top-0"
       >
         <div
           style={{
@@ -285,6 +287,7 @@ The design of this font is aimed at combining elements of both fonts, systematic
           </div>
           <div className="flex absolute right-5 tablet:right-0 tablet:relative">
             <LoopText clickCounter={clickCounter} />
+            <AlternativeToggle changeBgColor={changeBgColor} setAlternative={setAlternative} />
             <ChangeColorMenu
               handleBgColor={handleBgColor}
               changeBgColor={changeBgColor}
@@ -307,7 +310,9 @@ The design of this font is aimed at combining elements of both fonts, systematic
       >
         <textarea
           spellCheck="false"
-          className={`textarea max-w-[300px] min-h-full sm:max-w-full px-4 ${weight}`}
+          className={`textarea max-w-[300px] min-h-full sm:max-w-full px-4 ${weight} ${
+            enabled ? 'ligatures' : ''
+          }`}
           style={{
             fontSize: size + 'px',
             letterSpacing: spacing + 'px',
