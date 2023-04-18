@@ -8,7 +8,7 @@ const AlternativeToggle = ({ setAlternative, enabled, className = '' }) => {
             onClick={() => {
               setAlternative((enabled) => !enabled);
             }}
-            className={`toggle ${className} w-[26px] h-[14px] rounded-full peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[1.75px] after:left-[3px] after:rounded-full after:h-[10px] after:w-[10px] after:transition-all peer-checked:bg-green-600`}
+            className={`toggle ${className} w-[26px] h-[14px] rounded-full peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[3px] after:rounded-full after:h-[10px] after:w-[10px] after:transition-all peer-checked:bg-green-600`}
           ></div>
         </label>
       </div>
