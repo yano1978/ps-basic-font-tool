@@ -411,7 +411,7 @@ const FontSizeMenu = ({ className = '', toggleWeight }) => {
 
   return (
     <details className={className} open={isOpen} onClick={(e) => onToggle(e)}>
-      <summary className="absolute left-28 top-1 tablet:top-[12.5px] cursor-pointer">
+      <summary className="absolute left-24 top-1 xl:top-[12.5px] cursor-pointer">
         {!text ? '760 - regular' : text}
       </summary>
       <div className="font-menu">

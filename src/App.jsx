@@ -205,10 +205,10 @@ The design of this font is aimed at combining elements of both fonts, systematic
             backgroundColor: changeBgColor,
             color: changeTextColor,
           }}
-          className="mx-5 flex flex-wrap justify-start tablet:justify-between items-center text-white"
+          className="mx-5 flex flex-wrap justify-start xl:justify-between items-center text-white"
         >
           <a href="/">PS Basic</a>
-          <div className="ml-20 tablet:ml-5">
+          <div className="ml-20 xl:ml-5">
             <FontSizeMenu className={changeDeepColor} weight={weight} toggleWeight={toggleWeight} />
           </div>
           <div
@@ -216,19 +216,19 @@ The design of this font is aimed at combining elements of both fonts, systematic
               backgroundColor: changeBgColor,
               color: changeTextColor,
             }}
-            className="flex w-full tablet:w-auto"
+            className="flex w-full xl:w-auto"
           >
             <ul
               style={{
                 backgroundColor: changeBgColor,
                 color: changeTextColor,
               }}
-              className="flex flex-col tablet:flex-row w-full px-4 py-2 tablet:px-0 fixed bottom-0 left-0 tablet:relative tablet:top-0 bg-black"
+              className="flex flex-col xl:flex-row w-full px-4 py-2 xl:px-0 fixed bottom-0 left-0 xl:left-10 xl:relative xl:top-0 bg-black"
             >
-              <li className="tablet:!pl-0 flex">
+              <li className="xl:!pl-0 flex">
                 <label
                   htmlFor="size"
-                  className="flex w-full max-w-[85px] min-w-[95px] tablet:max-w-full"
+                  className="flex w-full max-w-[85px] min-w-[125px] xl:min-w-[95px] xl:max-w-full"
                 >
                   Size: {size + 'px'}
                 </label>
@@ -243,10 +243,10 @@ The design of this font is aimed at combining elements of both fonts, systematic
                   max="900"
                 />
               </li>
-              <li className="flex ml-0 tablet:ml-7">
+              <li className="flex ml-0 xl:ml-7">
                 <label
                   htmlFor="kern"
-                  className="flex w-full max-w-[80px] min-w-[95px] tablet:min-w-[90px]"
+                  className="flex w-full max-w-[80px] min-w-[125px] xl:min-w-[90px]"
                 >
                   Kern {Math.round(spacing) + 'px'}
                 </label>
@@ -261,10 +261,10 @@ The design of this font is aimed at combining elements of both fonts, systematic
                   max="90"
                 />
               </li>
-              <li className="flex ml-0 tablet:ml-7">
+              <li className="flex ml-0 xl:ml-7">
                 <label
                   htmlFor="leading"
-                  className="flex w-full max-w-[110px] min-w-[120px] tablet:min-w-[120px]"
+                  className="flex w-full max-w-[110px] min-w-[125px] xl:min-w-[120px]"
                 >
                   Leading {leading + 'px'}
                 </label>
@@ -281,7 +281,7 @@ The design of this font is aimed at combining elements of both fonts, systematic
               </li>
             </ul>
           </div>
-          <div className="flex absolute right-5 tablet:right-0 tablet:relative">
+          <div className="flex absolute right-5 xl:right-0 xl:relative">
             <LoopText className={changeDeepColor} clickCounter={clickCounter} />
             <AlternativeToggle className={changeDeepColor} setAlternative={setAlternative} />
             <ChangeColorMenu
@@ -306,7 +306,7 @@ The design of this font is aimed at combining elements of both fonts, systematic
       >
         <textarea
           spellCheck="false"
-          className={`textarea max-w-[300px] min-h-full sm:max-w-full px-4 ${weight} ${
+          className={`textarea max-w-[320px] min-h-full xs:max-w-full px-4 ${weight} ${
             enabled ? 'ligatures' : ''
           }`}
           style={{
