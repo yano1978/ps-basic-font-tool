@@ -486,7 +486,7 @@ body {
       -ms-transform: rotate(270deg);
       -o-transform: rotate(270deg);
     }
-    .font-menu {
+    /* .font-menu {
       z-index: 2;
       min-height: 750px;
       display: flex;
@@ -511,6 +511,10 @@ body {
           opacity: 0.8;
         }
       }
+    } */
+    .not-available {
+      color: #cccccc;
+      opacity: 0.8;
     }
   }
 

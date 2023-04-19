@@ -414,7 +414,7 @@ const FontSizeMenu = ({ className = '', toggleWeight }) => {
       <summary className="absolute left-24 top-1 xl:top-[12.5px] cursor-pointer">
         {!text ? '760 - regular' : text}
       </summary>
-      <div className="font-menu">
+      {/* <div className="font-menu">
         <div className="col pointer-events-none not-available">
           <div className="flex flex-row relative">
             <div className="w-1/4 absolute top-0.5">
@@ -437,7 +437,7 @@ const FontSizeMenu = ({ className = '', toggleWeight }) => {
           </div>
         </div>
         <div className="col pointer-events-none not-available">
-          <div className="grid grid-cols-3 gap-20">
+          <div className="grid grid-cols-3 gap-10">
             <div>
               <div>Compact</div>
               <div>500</div>
@@ -541,8 +541,8 @@ const FontSizeMenu = ({ className = '', toggleWeight }) => {
             </div>
           </div>
         </div>
-        <div className="col ">
-          <div className="grid grid-cols-3 gap-20 ">
+        <div className="col">
+          <div className="grid grid-cols-3 gap-20">
             <div className="pointer-events-none not-available">
               <div>Mono</div>
               <div>900</div>
@@ -566,6 +566,168 @@ const FontSizeMenu = ({ className = '', toggleWeight }) => {
                   </li>
                 ))}
               </ul>
+            </div>
+          </div>
+        </div>
+      </div> */}
+      <div className="z-10 absolute min-h-[750px] h-[100vh] -top-2 left-0 my-[3rem] py-[2.5rem] px-[1.25rem] bg-red w-full">
+        <div className="max-w-[1200px]">
+          <div className="flex flex-col md:flex-row flex-wrap">
+            <div className="w-full md:w-[33.333%] not-available pointer-events-none">
+              <div className="flex w-full flex-col md:flex-row">
+                <div className="md:mr-10">
+                  <div>Narrow</div>
+                  <div>400</div>
+                </div>
+                <div>
+                  <ul className="[&_li]:cursor-pointer">
+                    {narrowFonts.map((item) => (
+                      <li key={item.id}>
+                        <FontLink
+                          {...item}
+                          isActive={active === item.id}
+                          setLinkActive={setLinkActive}
+                        />
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="w-full md:w-[33.333%] not-available pointer-events-none">
+              <div className="flex w-full flex-col md:flex-row">
+                <div className="md:mr-10">
+                  <div>Compact</div>
+                  <div>500</div>
+                </div>
+                <div>
+                  <ul>
+                    {compactFonts.map((item) => (
+                      <li key={item.id}>
+                        <FontLink
+                          {...item}
+                          isActive={active === item.id}
+                          setLinkActive={setLinkActive}
+                        />
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="w-full md:w-[33.333%]">
+              <div className="flex w-full flex-col md:flex-row">
+                <div className="md:mr-10">
+                  <div>Normal</div>
+                  <div>600</div>
+                </div>
+                <div>
+                  <ul className="[&_li]:cursor-pointer">
+                    {normalFonts.map((item) => (
+                      <li
+                        onClick={(e) => {
+                          toggleWeight(item.fontClass);
+                          changeValueAndCloseMenu({ text: item.fontFull });
+                          onToggle(e);
+                        }}
+                        key={item.id}
+                      >
+                        <FontLink
+                          {...item}
+                          isActive={active === item.id}
+                          setLinkActive={setLinkActive}
+                        />
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col md:flex-row flex-wrap mt-0 md:mt-10">
+            <div className="w-full md:w-[33.333%]">
+              <div className="flex w-full flex-col md:flex-row">
+                <div className="md:mr-10">
+                  <div>Extended</div>
+                  <div>700</div>
+                </div>
+                <div>
+                  <ul className="[&_li]:cursor-pointer">
+                    {extendedFonts.map((item) => (
+                      <li
+                        onClick={(e) => {
+                          toggleWeight(item.fontClass);
+                          changeValueAndCloseMenu({ text: item.fontFull });
+                          onToggle(e);
+                        }}
+                        key={item.id}
+                      >
+                        <FontLink
+                          {...item}
+                          isActive={active === item.id}
+                          setLinkActive={setLinkActive}
+                        />
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="w-full md:w-[33.333%] not-available pointer-events-none">
+              <div className="flex w-full flex-col md:flex-row">
+                <div className="md:mr-10">
+                  <div>Wide</div>
+                  <div>800</div>
+                </div>
+                <div>
+                  <ul>
+                    {wideFonts.map((item) => (
+                      <li
+                        onClick={(e) => {
+                          toggleWeight(item.fontClass);
+                          changeValueAndCloseMenu({ text: item.fontTitle });
+                          onToggle(e);
+                        }}
+                        key={item.id}
+                      >
+                        <FontLink
+                          {...item}
+                          isActive={active === item.id}
+                          setLinkActive={setLinkActive}
+                        />
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="w-full md:w-[33.333%] not-available pointer-events-none">
+              <div className="flex w-full flex-col md:flex-row">
+                <div className="md:mr-10">
+                  <div>Mono</div>
+                  <div>900</div>
+                </div>
+                <div>
+                  <ul>
+                    {monoFonts.map((item) => (
+                      <li
+                        onClick={(e) => {
+                          toggleWeight(item.fontClass);
+                          changeValueAndCloseMenu({ text: item.fontTitle });
+                          onToggle(e);
+                        }}
+                        key={item.id}
+                      >
+                        <FontLink
+                          {...item}
+                          isActive={active === item.id}
+                          setLinkActive={setLinkActive}
+                        />
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
