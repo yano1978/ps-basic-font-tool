@@ -363,6 +363,38 @@ body {
   }
   /* Input textarea native override */
   textarea {
+    &::selection {
+      background-color: #000;
+      color: #e24523;
+    }
+    &.white-black::selection {
+      background-color: #000;
+      color: #fff;
+    }
+    &.black-white::selection {
+      background-color: #fff;
+      color: #000;
+    }
+    &.grey-black::selection {
+      background-color: #000;
+      color: #4b4e54;
+    }
+    &.red-white::selection {
+      background-color: #fff;
+      color: #e24523;
+    }
+    &.white-red::selection {
+      background-color: #e24523;
+      color: #fff;
+    }
+    &.black-red::selection {
+      background-color: #e24523;
+      color: #000;
+    }
+    &.grey-white::selection {
+      background-color: #fff;
+      color: #4b4e54;
+    }
     font-family: '760Regular';
     background: transparent;
     border: none;
