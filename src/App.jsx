@@ -306,7 +306,7 @@ The design of this font is aimed at combining elements of both fonts, systematic
       >
         <textarea
           spellCheck="false"
-          className={`textarea max-w-[320px] min-h-full xs:max-w-full px-4 ${weight} ${
+          className={`textarea w-full max-w-[320px] min-h-full xs:max-w-full px-4 ${weight} ${
             enabled ? 'ligatures' : ''
           }`}
           style={{
