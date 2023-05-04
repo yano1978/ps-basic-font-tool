@@ -1,4 +1,4 @@
-# Ps Basic Project
+# PS BASIC PROJECT
 
 Ps Basic is a font testing website created with Vite/React & Tailwind
 
