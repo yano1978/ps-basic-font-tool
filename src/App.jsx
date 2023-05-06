@@ -42,7 +42,7 @@ studio
   let [changeDeepColor, setDropdownColor] = useState('');
   let [dropDownCircle, setDropDownCircle] = useState('black');
   const [textValue, setTextValue] = useState(defaulText);
-  const [size, setSize] = useState(200);
+  let [size, setChangeSize] = useState(200);
   const [spacing, setLetterSpacing] = useState(-18);
   let [leading, setLineHeight] = useState(160);
   let [weight, setWeight] = useState('');
@@ -163,19 +163,15 @@ talk@psfd.studio
     setWeight(weight);
   };
 
-  const fontSizeChange = (e) => {
-    // console.log('setting font size', e.target.value);
-    setSize(parseInt(e.target.value));
-    let delta = e.target.value;
-    if (delta >= size) {
-      // console.log(leading++);
-      leading++;
-      setLineHeight(leading);
-    } else {
-      // console.log(leading--);
-      leading--;
-      setLineHeight(parseInt(leading));
-    }
+  const onInputSize = (value) => {
+    let newLeading = parseInt(value);
+    leading = Math.round(newLeading / 1.25);
+    setLineHeight(leading);
+  };
+
+  const onChangeSize = (value) => {
+    size = value;
+    setChangeSize(parseInt(size));
   };
 
   const letterSpacingChange = (e) => {
@@ -232,7 +228,8 @@ talk@psfd.studio
                 <input
                   className={changeDeepColor}
                   value={size}
-                  onChange={fontSizeChange}
+                  onChange={(e) => onChangeSize(e.target.value)}
+                  onInput={(e) => onInputSize(e.target.value)}
                   type="range"
                   id="size"
                   name="size"
