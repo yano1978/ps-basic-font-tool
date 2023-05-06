@@ -32,8 +32,7 @@ range sliders^
 
 P.S.
 Keep in touch =
-@programme.
-studio
+@psfd.studio
 
 <3`;
 
@@ -43,7 +42,7 @@ studio
   let [dropDownCircle, setDropDownCircle] = useState('black');
   const [textValue, setTextValue] = useState(defaulText);
   let [size, setChangeSize] = useState(200);
-  const [spacing, setLetterSpacing] = useState(-18);
+  let [spacing, setLetterSpacing] = useState(-18);
   let [leading, setLineHeight] = useState(160);
   let [weight, setWeight] = useState('');
   let [counter, setCounter] = useState(0);
@@ -143,6 +142,13 @@ Basic`;
   };
 
   const injectDetailsText = () => {
+    weight = 'PSBasic1200-660Regular';
+    size = 74;
+    spacing = -6;
+    leading = 62;
+    changeBgColor = '#4b4e54';
+    changeTextColor = '#000';
+    changeDeepColor = 'grey-black';
     let newValue = `PS Basic; is a structural type system drawn on a rigid grid of twelve hundred square units, divided into twenty three vertical paths (12 columns and 11 intervals). Consisting of 60 styles, 5 widths and 6 weights, from light to bold, narrow to wide, including italics, diacritics for language support, and containing alternative character sets.
 
 The name is derived from its conceptual meaning, the purpose is to produce an experiment that aims to align two subtly different modernist approaches circa 1957 in Switzerland. The release of Univers by Adrian Frutiger gained popularity in Basel, while Helvetica was preferred as the primary font in Zurich.
@@ -154,8 +160,14 @@ PS Basic is the first project by studio PSfD® ('Programme Studio for Design'), 
 ©2023 PSfD®
 PSfD.studio
 talk@psfd.studio
-@‌psfdesign`;
+@psfd.studio`;
     setTextValue(newValue);
+    setChangeSize(size);
+    setLetterSpacing(spacing);
+    setLineHeight(leading);
+    setChangeColor(changeBgColor);
+    setChangeTextColor(changeTextColor);
+    setDropdownColor(changeDeepColor);
   };
 
   const toggleWeight = (value) => {
