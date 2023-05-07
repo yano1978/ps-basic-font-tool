@@ -165,11 +165,9 @@ talk@psfd.studio
   };
 
   const onInputSize = (value) => {
-    // let newLeading = parseInt(value);
-    // leading = Math.round(newLeading / 1.25);
     let newHeight = Math.round(parseInt(value) * 10);
     height = newHeight;
-    console.log(height);
+    // console.log(height);
     setHeight(height);
   };
 
@@ -255,8 +253,8 @@ talk@psfd.studio
                   type="range"
                   id="kern"
                   name="kern"
-                  min="-90"
-                  max="90"
+                  min="-72"
+                  max="12"
                 />
               </li>
               <li className="flex ml-0 xl:ml-7">
@@ -273,8 +271,8 @@ talk@psfd.studio
                   type="range"
                   id="leading"
                   name="leading"
-                  min="16"
-                  max="900"
+                  min="72"
+                  max="120"
                 />
               </li>
             </ul>
