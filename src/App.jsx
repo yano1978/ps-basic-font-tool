@@ -42,7 +42,7 @@ Keep in touch =
   let [dropDownCircle, setDropDownCircle] = useState('black');
   const [textValue, setTextValue] = useState(defaulText);
   let [size, setChangeSize] = useState(200);
-  const [spacing, setLetterSpacing] = useState(-18);
+  let [spacing, setLetterSpacing] = useState(-18);
   let [leading, setLineHeight] = useState(80);
   let [height, setHeight] = useState(480);
   let [weight, setWeight] = useState('');
@@ -146,7 +146,7 @@ Basic`;
     weight = 'PSBasic1200-660Regular';
     size = 74;
     spacing = -6;
-    leading = 62;
+    leading = 84;
     changeBgColor = '#4b4e54';
     changeTextColor = '#000';
     changeDeepColor = 'grey-black';

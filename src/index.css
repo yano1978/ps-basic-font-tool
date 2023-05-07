@@ -218,6 +218,11 @@ body {
   .static-text {
     font-family: '760Regular';
   }
+
+  button:focus {
+    outline: none;
+    box-shadow: none;
+  }
   /* Input range native override */
   input[type='range'] {
     background: transparent;
