@@ -1,9 +1,74 @@
 import { useState, useEffect, useRef } from 'react';
-import buttons from '../data/buttons.json';
 
 const ChangeColorMenu = ({ handleBgColor, changeBgColor, dropDownCircle }) => {
   const [isOpen, setIsOpen] = useState(false);
   const btnRef = useRef();
+  const [buttons] = useState([
+    {
+      id: 1,
+      bg: '#E24523',
+      text: '#000',
+      border: 'border-black',
+      bgName: 'bg-red',
+      textName: 'text-black',
+    },
+    {
+      id: 2,
+      bg: '#fff',
+      text: '#000',
+      border: 'border-white',
+      bgName: 'bg-white',
+      textName: 'text-black',
+    },
+    {
+      id: 3,
+      bg: '#000',
+      text: '#fff',
+      border: 'border-black',
+      bgName: 'bg-black',
+      textName: 'text-white',
+    },
+    {
+      id: 4,
+      bg: '#4B4E54',
+      text: '#000',
+      border: 'border-black',
+      bgName: 'bg-grey',
+      textName: 'text-black',
+    },
+    {
+      id: 5,
+      bg: '#E24523',
+      text: '#fff',
+      border: 'border-white',
+      bgName: 'bg-red',
+      textName: 'text-white',
+    },
+    {
+      id: 6,
+      bg: '#fff',
+      text: '#E24523',
+      border: 'border-red',
+      bgName: 'bg-white',
+      textName: 'text-red',
+    },
+    {
+      id: 7,
+      bg: '#000',
+      text: '#E24523',
+      border: 'border-red',
+      bgName: 'bg-black',
+      textName: 'text-red',
+    },
+    {
+      id: 8,
+      bg: '#4B4E54',
+      text: '#fff',
+      border: 'border-white',
+      bgName: 'bg-grey',
+      textName: 'text-white',
+    },
+  ]);
 
   useEffect(() => {
     const closeDropDown = (e) => {
