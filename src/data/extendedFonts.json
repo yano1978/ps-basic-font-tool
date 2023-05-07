@@ -1,0 +1,86 @@
+[
+  {
+    "id": 740,
+    "fontFull": "740 - light",
+    "fontNumber": "740, ",
+    "fontTitle": "light",
+    "fontClass": "PSBasic1200-740Light"
+  },
+  {
+    "id": 744,
+    "fontFull": "744 - light italic",
+    "fontNumber": "744, ",
+    "fontTitle": "light italic",
+    "fontClass": "PSBasic1200-744LightItalic"
+  },
+  {
+    "id": 750,
+    "fontFull": "750 - semi-light",
+    "fontNumber": "750, ",
+    "fontTitle": "semi-light",
+    "fontClass": "PSBasic1200-750Semi-Light"
+  },
+  {
+    "id": 754,
+    "fontFull": "754 - semi-light italic",
+    "fontNumber": "754, ",
+    "fontTitle": "semi-light italic",
+    "fontClass": "PSBasic1200-754Semi-LightItalic"
+  },
+  {
+    "id": 760,
+    "fontFull": "760 - regular",
+    "fontNumber": "760, ",
+    "fontTitle": "regular",
+    "fontClass": "PSBasic1200-760Regular"
+  },
+  {
+    "id": 764,
+    "fontFull": "764 - regular italic",
+    "fontNumber": "764, ",
+    "fontTitle": "regular italic",
+    "fontClass": "PSBasic1200-764RegularItalic"
+  },
+  {
+    "id": 770,
+    "fontFull": "770 - medium",
+    "fontNumber": "770, ",
+    "fontTitle": "medium",
+    "fontClass": "PSBasic1200-770Medium"
+  },
+  {
+    "id": 774,
+    "fontFull": "774 - medium italic",
+    "fontNumber": "774, ",
+    "fontTitle": "medium italic",
+    "fontClass": "PSBasic1200-774MediumItalic"
+  },
+  {
+    "id": 780,
+    "fontFull": "780 - semi-bold",
+    "fontNumber": "780, ",
+    "fontTitle": "semi-bold",
+    "fontClass": "PSBasic1200-780Semi-Bold"
+  },
+  {
+    "id": 784,
+    "fontFull": "784 - semi-bold italic",
+    "fontNumber": "784, ",
+    "fontTitle": "semi-bold italic",
+    "fontClass": "PSBasic1200-784Semi-BoldItalic"
+  },
+  {
+    "id": 790,
+    "fontFull": "790 - bold",
+    "fontNumber": "790, ",
+    "fontTitle": "bold",
+    "fontClass": "PSBasic1200-790Bold"
+  },
+  {
+    "id": 794,
+    "fontFull": "794 - bold italic",
+    "fontNumber": "794, ",
+    "fontTitle": "bold italic",
+    "fontClass": "PSBasic1200-794BoldItalic"
+  }
+]

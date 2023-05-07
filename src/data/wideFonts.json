@@ -1,0 +1,62 @@
+[
+  {
+    "id": 840,
+    "fontTitle": "840, light",
+    "fontClass": ""
+  },
+  {
+    "id": 844,
+    "fontTitle": "844, light italic",
+    "fontClass": ""
+  },
+  {
+    "id": 850,
+    "fontTitle": "850, semi-light",
+    "fontClass": ""
+  },
+  {
+    "id": 854,
+    "fontTitle": "854, semi-light italic",
+    "fontClass": ""
+  },
+  {
+    "id": 860,
+    "fontTitle": "860, regular",
+    "fontClass": ""
+  },
+  {
+    "id": 864,
+    "fontTitle": "864, regular italic",
+    "fontClass": ""
+  },
+  {
+    "id": 870,
+    "fontTitle": "870, medium",
+    "fontClass": ""
+  },
+  {
+    "id": 874,
+    "fontTitle": "874, medium italic",
+    "fontClass": ""
+  },
+  {
+    "id": 880,
+    "fontTitle": "880, semi-bold",
+    "fontClass": ""
+  },
+  {
+    "id": 884,
+    "fontTitle": "884, semi-bold italic",
+    "fontClass": ""
+  },
+  {
+    "id": 890,
+    "fontTitle": "890, bold",
+    "fontClass": ""
+  },
+  {
+    "id": 894,
+    "fontTitle": "894, bold italic",
+    "fontClass": ""
+  }
+]
