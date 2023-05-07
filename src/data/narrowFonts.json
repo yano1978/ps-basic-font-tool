@@ -1,0 +1,62 @@
+[
+  {
+    "id": 440,
+    "fontTitle": "440, light",
+    "fontClass": ""
+  },
+  {
+    "id": 444,
+    "fontTitle": "444, light italic",
+    "fontClass": ""
+  },
+  {
+    "id": 450,
+    "fontTitle": "450, semi-light",
+    "fontClass": ""
+  },
+  {
+    "id": 454,
+    "fontTitle": "454, semi-light italic",
+    "fontClass": ""
+  },
+  {
+    "id": 460,
+    "fontTitle": "460, regular",
+    "fontClass": ""
+  },
+  {
+    "id": 464,
+    "fontTitle": "464, regular italic",
+    "fontClass": ""
+  },
+  {
+    "id": 470,
+    "fontTitle": "470, medium",
+    "fontClass": ""
+  },
+  {
+    "id": 474,
+    "fontTitle": "474, medium italic",
+    "fontClass": ""
+  },
+  {
+    "id": 480,
+    "fontTitle": "480, semi-bold",
+    "fontClass": ""
+  },
+  {
+    "id": 484,
+    "fontTitle": "484, semi-bold italic",
+    "fontClass": ""
+  },
+  {
+    "id": 490,
+    "fontTitle": "490, bold",
+    "fontClass": ""
+  },
+  {
+    "id": 494,
+    "fontTitle": "494, bold italic",
+    "fontClass": ""
+  }
+]
