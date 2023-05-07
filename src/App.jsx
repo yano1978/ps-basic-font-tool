@@ -42,8 +42,9 @@ Keep in touch =
   let [dropDownCircle, setDropDownCircle] = useState('black');
   const [textValue, setTextValue] = useState(defaulText);
   let [size, setChangeSize] = useState(200);
-  let [spacing, setLetterSpacing] = useState(-18);
-  let [leading, setLineHeight] = useState(160);
+  const [spacing, setLetterSpacing] = useState(-18);
+  let [leading, setLineHeight] = useState(80);
+  let [height, setHeight] = useState(480);
   let [weight, setWeight] = useState('');
   let [counter, setCounter] = useState(0);
   const [enabled, setAlternative] = useState(false);
@@ -176,9 +177,10 @@ talk@psfd.studio
   };
 
   const onInputSize = (value) => {
-    let newLeading = parseInt(value);
-    leading = Math.round(newLeading / 1.25);
-    setLineHeight(leading);
+    let newHeight = Math.round(parseInt(value) * 10);
+    height = newHeight;
+    // console.log(height);
+    setHeight(height);
   };
 
   const onChangeSize = (value) => {
@@ -263,8 +265,8 @@ talk@psfd.studio
                   type="range"
                   id="kern"
                   name="kern"
-                  min="-90"
-                  max="90"
+                  min="-72"
+                  max="12"
                 />
               </li>
               <li className="flex ml-0 xl:ml-7">
@@ -281,8 +283,8 @@ talk@psfd.studio
                   type="range"
                   id="leading"
                   name="leading"
-                  min="16"
-                  max="900"
+                  min="72"
+                  max="120"
                 />
               </li>
             </ul>
@@ -314,7 +316,8 @@ talk@psfd.studio
           style={{
             fontSize: size + 'px',
             letterSpacing: spacing + 'px',
-            lineHeight: leading + 'px',
+            lineHeight: leading + '%',
+            height: height + 'px',
           }}
           name="description"
           id="description"
