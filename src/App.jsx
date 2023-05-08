@@ -146,6 +146,7 @@ Basic`;
     size = 74;
     spacing = -6;
     leading = 84;
+    dropDownCircle = 'black';
     changeBgColor = '#4b4e54';
     changeTextColor = '#000';
     changeDeepColor = 'grey-black';
@@ -168,6 +169,7 @@ talk@psfd.studio
     setChangeColor(changeBgColor);
     setChangeTextColor(changeTextColor);
     setDropdownColor(changeDeepColor);
+    setDropDownCircle(dropDownCircle);
   };
 
   const toggleWeight = (value) => {
