@@ -1,12 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import FontLink from '@/components/FontLink';
 import { useMediaQuery } from '@/hooks/mobileChecker';
-import narrowFonts from '../data/narrowFonts.json';
-import compactFonts from '../data/compactFonts.json';
-import normalFonts from '../data/normalFonts.json';
-import extendedFonts from '../data/extendedFonts.json';
-import wideFonts from '../data/wideFonts.json';
-import monoFonts from '../data/monoFonts.json';
 
 const FontSizeMenu = ({ className = '', toggleWeight }) => {
   const [active, setActive] = useState(41);
@@ -16,7 +10,41 @@ const FontSizeMenu = ({ className = '', toggleWeight }) => {
   let [isOpen, setIsOpen] = useState();
   let [text, setText] = useState('760 - regular');
   let [number, setNumber] = useState(760);
+  const [narrowFonts, setNarrowFonts] = useState([]);
+  const [compactFonts, setCompactFonts] = useState([]);
+  const [normalFonts, setNormalFonts] = useState([]);
+  const [extendedFonts, setExtendedFonts] = useState([]);
+  const [wideFonts, setWideFonts] = useState([]);
+  const [monoFonts, setMonoFonts] = useState([]);
   const isDesktop = useMediaQuery('(min-width: 450px)');
+
+  const baseUrl = 'https://raw.githubusercontent.com/yano1978/ps-basic-fonts/main/data/';
+
+  useEffect(() => {
+    const fetchFonts = async () => {
+      try {
+        // Fetch each font category separately
+        const narrow = await fetch(`${baseUrl}narrowFonts.json`).then((res) => res.json());
+        const compact = await fetch(`${baseUrl}compactFonts.json`).then((res) => res.json());
+        const normal = await fetch(`${baseUrl}normalFonts.json`).then((res) => res.json());
+        const extended = await fetch(`${baseUrl}extendedFonts.json`).then((res) => res.json());
+        const wide = await fetch(`${baseUrl}wideFonts.json`).then((res) => res.json());
+        const mono = await fetch(`${baseUrl}monoFonts.json`).then((res) => res.json());
+
+        // Update state with fetched data
+        setNarrowFonts(narrow);
+        setCompactFonts(compact);
+        setNormalFonts(normal);
+        setExtendedFonts(extended);
+        setWideFonts(wide);
+        setMonoFonts(mono);
+      } catch (error) {
+        console.error('Error fetching font data:', error);
+      }
+    };
+
+    fetchFonts();
+  }, []);
 
   const changeValueAndCloseMenu = (value) => {
     text = value.text;

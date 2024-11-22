@@ -7,7 +7,9 @@
   font-family: '660Regular';
   font-style: normal;
   font-weight: 400;
-  src: local('660Regular'), url('./assets/fonts/PSBasic1200-660Regular.otf') format('opentype');
+  src: local('660Regular'),
+    url('https://raw.githubusercontent.com/yano1978/ps-basic-fonts/main/fonts/PSBasic1200-660Regular.otf')
+      format('opentype');
 }
 
 /* Font Light */
@@ -15,13 +17,17 @@
   font-family: '640Light';
   font-style: normal;
   font-weight: 400;
-  src: local('640Light'), url('./assets/fonts/PSBasic1200-640Light.otf') format('opentype');
+  src: local('640Light'),
+    url('https://raw.githubusercontent.com/yano1978/ps-basic-fonts/main/fonts/PSBasic1200-640Light.otf')
+      format('opentype');
 }
 @font-face {
   font-family: '740Light';
   font-style: normal;
   font-weight: 400;
-  src: local('740Light'), url('./assets/fonts/PSBasic1200-740Light.otf') format('opentype');
+  src: local('740Light'),
+    url('https://raw.githubusercontent.com/yano1978/ps-basic-fonts/main/fonts/PSBasic1200-740Light.otf')
+      format('opentype');
 }
 
 /* Font Light Italic */
@@ -30,14 +36,16 @@
   font-style: normal;
   font-weight: 400;
   src: local('644LightItalic'),
-    url('./assets/fonts/PSBasic1200-644LightItalic.otf') format('opentype');
+    url('https://raw.githubusercontent.com/yano1978/ps-basic-fonts/main/fonts/PSBasic1200-644LightItalic.otf')
+      format('opentype');
 }
 @font-face {
   font-family: '744LightItalic';
   font-style: normal;
   font-weight: 400;
   src: local('744LightItalic'),
-    url('./assets/fonts/PSBasic1200-744LightItalic.otf') format('opentype');
+    url('https://raw.githubusercontent.com/yano1978/ps-basic-fonts/main/fonts/PSBasic1200-744LightItalic.otf')
+      format('opentype');
 }
 
 /* Font Semi Light */
@@ -46,14 +54,16 @@
   font-style: normal;
   font-weight: 400;
   src: local('650Semi-Light'),
-    url('./assets/fonts/PSBasic1200-650Semi-Light.otf') format('opentype');
+    url('https://raw.githubusercontent.com/yano1978/ps-basic-fonts/main/fonts/PSBasic1200-650Semi-Light.otf')
+      format('opentype');
 }
 @font-face {
   font-family: '750Semi-Light';
   font-style: normal;
   font-weight: 400;
   src: local('750Semi-Light'),
-    url('./assets/fonts/PSBasic1200-750Semi-Light.otf') format('opentype');
+    url('https://raw.githubusercontent.com/yano1978/ps-basic-fonts/main/fonts/PSBasic1200-750Semi-Light.otf')
+      format('opentype');
 }
 
 /* Font Semi Light Italic */
@@ -62,14 +72,16 @@
   font-style: normal;
   font-weight: 400;
   src: local('654Semi-LightItalic'),
-    url('./assets/fonts/PSBasic1200-654Semi-LightItalic.otf') format('opentype');
+    url('https://raw.githubusercontent.com/yano1978/ps-basic-fonts/main/fonts/PSBasic1200-654Semi-LightItalic.otf')
+      format('opentype');
 }
 @font-face {
   font-family: '754Semi-LightItalic';
   font-style: normal;
   font-weight: 400;
   src: local('754Semi-LightItalic'),
-    url('./assets/fonts/PSBasic1200-754Semi-LightItalic.otf') format('opentype');
+    url('https://raw.githubusercontent.com/yano1978/ps-basic-fonts/main/fonts/PSBasic1200-754Semi-LightItalic.otf')
+      format('opentype');
 }
 
 /* Font Regular */
@@ -77,13 +89,17 @@
   font-family: '660Regular';
   font-style: normal;
   font-weight: 400;
-  src: local('660Regular'), url('./assets/fonts/PSBasic1200-660Regular.otf') format('opentype');
+  src: local('660Regular'),
+    url('https://raw.githubusercontent.com/yano1978/ps-basic-fonts/main/fonts/PSBasic1200-660Regular.otf')
+      format('opentype');
 }
 @font-face {
   font-family: '760Regular';
   font-style: normal;
   font-weight: 400;
-  src: local('760Regular'), url('./assets/fonts/PSBasic1200-760Regular.otf') format('opentype');
+  src: local('760Regular'),
+    url('https://raw.githubusercontent.com/yano1978/ps-basic-fonts/main/fonts/PSBasic1200-760Regular.otf')
+      format('opentype');
 }
 
 /* Font Regular Italic */
@@ -92,14 +108,16 @@
   font-style: normal;
   font-weight: 400;
   src: local('664RegularItalic'),
-    url('./assets/fonts/PSBasic1200-664RegularItalic.otf') format('opentype');
+    url('https://raw.githubusercontent.com/yano1978/ps-basic-fonts/main/fonts/PSBasic1200-664RegularItalic.otf')
+      format('opentype');
 }
 @font-face {
   font-family: '764RegularItalic';
   font-style: normal;
   font-weight: 400;
   src: local('764RegularItalic'),
-    url('./assets/fonts/PSBasic1200-764RegularItalic.otf') format('opentype');
+    url('https://raw.githubusercontent.com/yano1978/ps-basic-fonts/main/fonts/PSBasic1200-764RegularItalic.otf')
+      format('opentype');
 }
 
 /* Font Medium */
@@ -107,13 +125,17 @@
   font-family: '670Medium';
   font-style: normal;
   font-weight: 400;
-  src: local('670Medium'), url('./assets/fonts/PSBasic1200-670Medium.otf') format('opentype');
+  src: local('670Medium'),
+    url('https://raw.githubusercontent.com/yano1978/ps-basic-fonts/main/fonts/PSBasic1200-670Medium.otf')
+      format('opentype');
 }
 @font-face {
   font-family: '770Medium';
   font-style: normal;
   font-weight: 400;
-  src: local('770Medium'), url('./assets/fonts/PSBasic1200-770Medium.otf') format('opentype');
+  src: local('770Medium'),
+    url('https://raw.githubusercontent.com/yano1978/ps-basic-fonts/main/fonts/PSBasic1200-770Medium.otf')
+      format('opentype');
 }
 
 /* Font Medium Italic */
@@ -122,14 +144,16 @@
   font-style: normal;
   font-weight: 400;
   src: local('674MediumItalic'),
-    url('./assets/fonts/PSBasic1200-674MediumItalic.otf') format('opentype');
+    url('https://raw.githubusercontent.com/yano1978/ps-basic-fonts/main/fonts/PSBasic1200-674MediumItalic.otf')
+      format('opentype');
 }
 @font-face {
   font-family: '774MediumItalic';
   font-style: normal;
   font-weight: 400;
   src: local('774MediumItalic'),
-    url('./assets/fonts/PSBasic1200-774MediumItalic.otf') format('opentype');
+    url('https://raw.githubusercontent.com/yano1978/ps-basic-fonts/main/fonts/PSBasic1200-774MediumItalic.otf')
+      format('opentype');
 }
 
 /* Font Semi Bold */
@@ -137,13 +161,17 @@
   font-family: '680Semi-Bold';
   font-style: normal;
   font-weight: 400;
-  src: local('680Semi-Bold'), url('./assets/fonts/PSBasic1200-680Semi-Bold.otf') format('opentype');
+  src: local('680Semi-Bold'),
+    url('https://raw.githubusercontent.com/yano1978/ps-basic-fonts/main/fonts/PSBasic1200-680Semi-Bold.otf')
+      format('opentype');
 }
 @font-face {
   font-family: '780Semi-Bold';
   font-style: normal;
   font-weight: 400;
-  src: local('780Semi-Bold'), url('./assets/fonts/PSBasic1200-780Semi-Bold.otf') format('opentype');
+  src: local('780Semi-Bold'),
+    url('https://raw.githubusercontent.com/yano1978/ps-basic-fonts/main/fonts/PSBasic1200-780Semi-Bold.otf')
+      format('opentype');
 }
 
 /* Font Semi Bold Italic */
@@ -152,26 +180,32 @@
   font-style: normal;
   font-weight: 400;
   src: local('684Semi-BoldItalic'),
-    url('./assets/fonts/PSBasic1200-684Semi-BoldItalic.otf') format('opentype');
+    url('https://raw.githubusercontent.com/yano1978/ps-basic-fonts/main/fonts/PSBasic1200-684Semi-BoldItalic.otf')
+      format('opentype');
 }
 @font-face {
   font-family: '784Semi-BoldItalic';
   font-style: normal;
   font-weight: 400;
   src: local('784Semi-BoldItalic'),
-    url('./assets/fonts/PSBasic1200-784Semi-BoldItalic.otf') format('opentype');
+    url('https://raw.githubusercontent.com/yano1978/ps-basic-fonts/main/fonts/PSBasic1200-784Semi-BoldItalic.otf')
+      format('opentype');
 }
 
 /* Font Bold */
 @font-face {
   font-family: '690Bold';
   font-weight: bold;
-  src: local('690Bold'), url('./assets/fonts/PSBasic1200-690Bold.otf') format('opentype');
+  src: local('690Bold'),
+    url('https://raw.githubusercontent.com/yano1978/ps-basic-fonts/main/fonts/PSBasic1200-690Bold.otf')
+      format('opentype');
 }
 @font-face {
   font-family: '790Bold';
   font-weight: bold;
-  src: local('790Bold'), url('./assets/fonts/PSBasic1200-790Bold.otf') format('opentype');
+  src: local('790Bold'),
+    url('https://raw.githubusercontent.com/yano1978/ps-basic-fonts/main/fonts/PSBasic1200-790Bold.otf')
+      format('opentype');
 }
 
 /* Font Bold Italic */
@@ -179,13 +213,15 @@
   font-family: '694BoldItalic';
   font-weight: bold;
   src: local('694BoldItalic'),
-    url('./assets/fonts/PSBasic1200-694BoldItalic.otf') format('opentype');
+    url('https://raw.githubusercontent.com/yano1978/ps-basic-fonts/main/fonts/PSBasic1200-694BoldItalic.otf')
+      format('opentype');
 }
 @font-face {
   font-family: '794BoldItalic';
   font-weight: bold;
   src: local('794BoldItalic'),
-    url('./assets/fonts/PSBasic1200-794BoldItalic.otf') format('opentype');
+    url('https://raw.githubusercontent.com/yano1978/ps-basic-fonts/main/fonts/PSBasic1200-794BoldItalic.otf')
+      format('opentype');
 }
 
 *,
